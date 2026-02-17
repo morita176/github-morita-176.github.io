@@ -1,9 +1,0 @@
-@use '../foundation/variables'as v;
-@use '../foundation/functions'as f;
-
-/* フォントの共通スタイル */
-// Font M PLUS Rounded 1c
-.mplus {
-  font-family: v.$f-mplus;
-  font-weight: 500;
-}
