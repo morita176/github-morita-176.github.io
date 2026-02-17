@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web制作クリエイター：Yayoi Morita</title>
+        <meta name="description" content="テックアカデミーでWeb制作を学び、副業として活動しているMORITA YAYOIのポートフォリオサイトです。">
+        <meta name="keywords" content="">
+        <meta property="og:title" content="Web制作クリエイター：Yayoi Morita">
+        <meta property="og:description" content="テックアカデミーでWeb制作を学び、副業として活動しているMORITA YAYOIのポートフォリオサイトです。">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://drive.google.com/file/d/1CG8CpwrTZpSVHfUkjiMq618RxGHFVQjx/view?usp=sharing">
+        <meta property="og:image" content="">
+        <meta property="og:site_name" content="Web制作クリエイター：Yayoi Morita">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/style/main.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <a class="header__logo mplus" href="./">Yayoi Morita</a>
+
+            <!-- 開閉用チェックボックス -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <!-- ハンバーガーボタン -->
+            <label for="menu-toggle" class="hamburger__button">
+                <i class="bi bi-list"></i>
+            </label>
+
+            <!-- メニュー -->
+            <nav class="hamburger-menu">
+                <ul class="hamburger-nav-list mplus">
+                    <li><a href="./">TOP</a></li>
+                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/skills">Skills</a></li>
+                    <li><a href="/works">Works</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- main -->
+        <main class="main">
+            <!-- カバー -->
+            <section class="cover">
+                <div class="container">
+                    <div class="cover__left">
+                        <img src="/assets/image/cover.jpg" alt="">
+                    </div>
+                    <div class="cover__right">
+                        <div class="cover__title">
+                            <p class="mplus">Yayoi Morita</p>
+                            <h1 class="mplus">森田 弥生</h1>
+                        </div>
+                        <p><a href="https://techacademy.jp/" target="_blank">TechAcademy</a>にて「はじめての副業コース」「Web制作実践コース」を修了し、2026年2月に卒業しました。<br>現在はAzure構築の学習を進めながら、副業としてWeb制作（フロントエンド）の案件を請け負っています。</p>
+                    </div>
+                </div>
+            </section>
+            <!-- About Me -->
+            <section class="about">
+                <h2 class="mplus"><span>A</span>bout Me</h2>
+                <div class="container about__item" id="about">
+                    <div class="about__right">
+                        <p>富山県富山市在住。これまでに複数回の転職を経験し、現在はSEとして働いています。<br>約5年間、クラウド環境の運用・保守業務に従事してきました。<br>インフラエンジニアとしての実務経験を背景に、「作って終わり」ではなく、運用まで見据えたWeb制作を意識しています。</p>
+                    </div>
+                    <div class="about__left">
+                        <img src="/assets/image/about.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+            <!-- Skills -->
+            <section class="skills" id="skills">
+                <h2 class="mplus"><span>S</span>kills</h2>
+                <div class="skills__item">
+                    <div class="skills__box">
+                        <h3>Web制作</h3>
+                        <ul>
+                            <li>HTML / CSS / JavaScript</li>
+                            <li>レスポンシブ対応</li>
+                            <li>コーディング（デザインカンプからの実装対応可）</li>
+                        </ul>
+                    </div>
+                    <div class="skills__box">
+                        <h3>クラウド・インフラ基礎知識</h3>
+                        <ul>
+                            <li>クラウド環境の運用・保守経験（約5年）</li>
+                            <li>Azure：基本設計・詳細設計作成経験（構築学習中）</li>
+                            <li>AWS：資格取得済み（設計思想・構成理解レベル）</li>
+                        </ul>
+                        <p class="skills__box--s">※副業案件ではWeb制作業務を中心に対応しています。</p>
+                    </div>
+                    <div class="skills__box">
+                        <h3>取得済み資格</h3>
+                        <ul>
+                            <li>AZ-900</li>
+                            <li>AZ-104</li>
+                            <li>AWS Certified Cloud Practitioner</li>
+                            <li>AWS Certified Solutions Architect – Associate</li>
+                            <li>AWS Certified Security – Specialty</li>
+                            <li>LPIC-1</li>
+                            <li>基本情報技術者試験</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- works -->
+            <section class="works">
+                <div class="container" id="works">
+                    <h2 class="mplus"><span>W</span>orks</h2>
+                    <!-- work item -->
+                    <div class="works__list">
+                        <article class="work-card">
+                            <div class="work-card__img">
+                                <picture>
+                                    <source media="(min-width: 768px)" srcset="./works/Kirameki_Farm/assets/image/bg_pc.png">
+                                    <img src="./works/Kirameki_Farm/assets/image/bg_sp.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="work-card__body">
+                                <h3 class="work-card__name">課題制作サイト（TechAcademy様）</h3>
+                                <dl>
+                                    <dd>制作時間</dd>
+                                    <dt>１週間</dt>
+                                    <dd>制作範囲</dd>
+                                    <dt>フロントエンド実装（デザインカンプからのコーディング）</dt>
+                                    <dd>使用技術</dd>
+                                    <dt>HTML / CSS / JavaScript</dt>
+                                </dl>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="work-card__link">サイトを見る<i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer class="footer">
+            <p>Copyright &copy; 2023 Taro Kirameki All Rights Reserved.</p>
+        </footer>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- js -->
+        <script src="./assets/script/main.js"></script>
+    </body>
+
+</html>

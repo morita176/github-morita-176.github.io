@@ -1,0 +1,111 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* header
+------------------------------------------ */
+// checkboxは見せない
+.menu-toggle {
+  display: none;
+}
+
+// headerを「伸びる箱」にする
+.header {
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: height 0.4s ease;
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 0;
+  width: 90vw;
+  padding-left: 6vw;
+  padding-right: 6vw;
+  z-index: 100;
+  background-color: v.$c-orange-dark;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: v.$width-wide;
+
+  // ロゴ
+  &__logo {
+    color: v.$c-white;
+    font-size: f.rem(28);
+  }
+}
+
+/* ハンバーガーボタン
+------------------------------------------ */
+.hamburger {
+  &__button {
+    font-size: f.rem(33);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: v.$c-white;
+
+    @include v.mq(pc) {
+      display: none;
+    }
+  }
+}
+
+
+
+/* ハンバーガーメニュー
+------------------------------------------ */
+.hamburger-nav-list a {
+  color: v.$c-white;
+  font-size: f.rem(20);
+}
+
+@include v.mq(sp) {
+  .hamburger-menu {
+    width: 90vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: v.$c-orange-dark;
+  }
+
+  // メニュー表示時
+  .menu-toggle:checked~.hamburger-menu {
+    max-height: 280px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // メニュー一覧
+  .hamburger-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: f.rem(26);
+    padding: f.rem(32) 0;
+    text-align: center;
+  }
+}
+
+/* PC版 */
+@include v.mq(pc) {
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    column-gap: f.rem(8);
+  }
+
+  .hamburger-nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 2.8vw;
+    align-items: center;
+    justify-content: space-between;
+
+    & li:first-child {
+      display: none;
+    }
+
+  }
+}

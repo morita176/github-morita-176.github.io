@@ -1,0 +1,26 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+
+/* ページトップへ戻るボタン
+------------------------------------------ */
+.button-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: f.rem(16);
+    right: 4%;
+    width: f.rem(40);
+    height: f.rem(40);
+    color: v.$c-white;
+    background-color: v.$c-orange-dark;
+    @include v.mq(pc) {
+        right: 10%;
+    }
+}
+
+/* footer 上に来た時の状態 */
+.button-to-top.is-footer {
+    position: absolute;
+}
