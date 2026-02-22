@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <script>
+            if (localStorage.getItem("login_auth") !== "true") {
+                location.href = "./login.html";
+            }
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- ファビコン -->
+        <link rel="icon" href="../assets/image/favicon_io/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/image/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/image/favicon_io/favicon-16x16.png">
+        <link rel="apple-touch-icon" href="../assets/image/favicon_io/apple-touch-icon.png">
+        <title>【ポートフォリオ】Web制作クリエイター：Yayoi Morita</title>
+        <meta name="description" content="テックアカデミーでWeb制作を学び、副業として活動しているMORITA YAYOIのポートフォリオサイトです。">
+        <meta name="keywords" content="">
+        <meta property="og:title" content="Web制作クリエイター：Yayoi Morita">
+        <meta property="og:description" content="テックアカデミーでWeb制作を学び、副業として活動しているMORITA YAYOIのポートフォリオサイトです。">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://morita176.github.io/github-morita-176.github.io/">
+        <meta property="og:image" content="">
+        <meta property="og:site_name" content="Web制作クリエイター：Yayoi Morita">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="../assets/style/main.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <a class="header__logo mplus" href="./">Yayoi Morita</a>
+
+            <!-- 開閉用チェックボックス -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <!-- ハンバーガーボタン -->
+            <label for="menu-toggle" class="hamburger__button">
+                <i class="bi bi-list"></i>
+            </label>
+
+            <!-- メニュー -->
+            <nav class="hamburger-menu">
+                <ul class="hamburger-nav-list mplus">
+                    <li><a href="../">TOP</a></li>
+                    <li><a href="../#about">About Me</a></li>
+                    <li><a href="../#skills">Skills</a></li>
+                    <li><a href="../#works">Works</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- main -->
+        <main class="main">
+            <!-- works -->
+            <section class="works" id="works">
+                <div class="container">
+                    <h2 class="mplus"><span>W</span>orks</h2>
+                    <!-- 案件1 -->
+                    <div class="work-card">
+                        <div class="work-card__body">
+                            <div class="work-card__title">
+                                <h3 class="work-card__name">課題制作サイト<br>（TechAcademy様）</h3>
+                                <img src="../works/Kirameki_Farm/assets/image/bg_pc.png" alt="Kirameki Farm">
+                            </div>
+                            <dl>
+                                <dt>制作時間</dt>
+                                <dd>6日間（20.5時間）</dd>
+                                <dt>制作範囲</dt>
+                                <dd>フロントエンド実装（デザインカンプからのコーディング）</dd>
+                                <dt>使用技術</dt>
+                                <dd>HTML / CSS / JavaScript</dd>
+                            </dl>
+                            <a href="../works/Kirameki_Farm/index.html" class="button button__list" target="_blank">サイトを見る<i class="bi bi-chevron-right button__bi"></i></a>
+                        </div>
+                        <!-- 案件2-->
+                        <div class="work-card__body">
+                            <div class="work-card__title">
+                                <h3 class="work-card__name">課題制作サイト<br>（TechAcademy様）</h3>
+                                <img src="../works/KIRAMEKI_BEAUTY_LABO/assets/image/logo.png" alt="KIRAMEKI BEAUTY LABO">
+                            </div>
+                            <dl>
+                                <dt>制作時間</dt>
+                                <dd>7日間（23.5時間）</dd>
+                                <dt>制作範囲</dt>
+                                <dd>フロントエンド実装（デザインカンプからのコーディング）</dd>
+                                <dt>使用技術</dt>
+                                <dd>HTML / CSS / JavaScript</dd>
+                            </dl>
+                            <a href="../works/KIRAMEKI_BEAUTY_LABO/index.html" class="button button__list" target="_blank">サイトを見る<i class="bi bi-chevron-right button__bi"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- contact -->
+            <section class="contact" id="contact">
+                <div class="container">
+                    <h2 class="mplus"><span>C</span>ontact</h2>
+                    <p>以下クラウドソーシングにて案件を受けて回っております。<br>お手数ですが、サイトよりお問い合わせください。</p>
+                    <div class="contact__btn">
+                        <a href="" class="button">ランサーズ様<i class="bi bi-chevron-right button__bi"></i></a>
+                        <a href="" class="button">クラウドワークス様<i class="bi bi-chevron-right button__bi"></i></a>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer class="footer">
+            <p>Copyright &copy; 2026 Yayoi Morita All Rights Reserved.</p>
+        </footer>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- js -->
+        <script src="./assets/script/main.js"></script>
+    </body>
+
+</html>

@@ -246,29 +246,42 @@ ul {
   }
 }
 
-/* ページトップへ戻るボタン
+/* ボタンのスタイル
 ------------------------------------------ */
-.button-to-top {
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  bottom: 1rem;
-  right: 4%;
-  width: 2.5rem;
-  height: 2.5rem;
-  color: #ffffff;
+  height: 3.75rem;
+  width: 18.75rem;
+  border-radius: 1.875rem;
+  border: 2px solid #F5BB06;
   background-color: #F5BB06;
+  color: #ffffff;
+  font-size: 1.25rem;
+  position: relative;
 }
-@media screen and (min-width: 768px) {
-  .button-to-top {
-    right: 10%;
-  }
+.button:hover {
+  background-color: #ffffff;
+  color: #F5BB06;
 }
-
-/* footer 上に来た時の状態 */
-.button-to-top.is-footer {
+.button__login {
+  margin-top: 1.25rem;
+}
+.button__list {
+  height: 3.125rem;
+  margin: 0.9375rem auto 0.625rem;
+  background-color: #ffffff;
+  color: #F5BB06;
+}
+.button__list:hover {
+  background-color: #FEF5D1;
+}
+.button__bi {
   position: absolute;
+  top: 50%;
+  right: 2vw;
+  transform: translateY(-50%);
 }
 
 .container {
@@ -384,7 +397,7 @@ h2 span::before {
     background-color: #F5BB06;
   }
   .menu-toggle:checked ~ .hamburger-menu {
-    max-height: 280px;
+    max-height: 21.875rem;
     opacity: 1;
     visibility: visible;
   }
@@ -505,7 +518,7 @@ h2 span::before {
 }
 @media screen and (min-width: 768px) {
   .about__item {
-    padding-top: 0;
+    padding-top: 1.25rem;
     padding-bottom: 0;
     flex-direction: row-reverse;
     gap: 2.5rem;
@@ -597,13 +610,11 @@ h2 span::before {
   margin-top: 5rem;
 }
 .works__attention {
-  background-color: #EDDDFD;
+  background-color: #FEF5D1;
   padding: 1.25rem 1rem;
-  color: #555;
 }
 @media screen and (min-width: 768px) {
   .works__attention {
-    font-size: 1.25rem;
     text-align: center;
   }
 }
@@ -612,11 +623,12 @@ h2 span::before {
   display: flex;
   flex-direction: column;
   margin: 2.5rem auto;
-  gap: 1.25rem;
+  gap: 2.5rem;
 }
 @media screen and (min-width: 768px) {
   .work-card {
     flex-direction: row;
+    gap: 1.875rem;
   }
 }
 .work-card__title {
@@ -660,6 +672,31 @@ h2 span::before {
   }
 }
 
+/* 案件一覧
+------------------------------------------ */
+/* Contact
+------------------------------------------ */
+.contact {
+  margin: 2.5rem auto 3.75rem;
+}
+.contact p {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+.contact__btn {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .contact__btn {
+    flex-direction: row;
+  }
+}
+
 /* footer
 ------------------------------------------ */
 .footer {
@@ -671,4 +708,39 @@ h2 span::before {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* login
+------------------------------------------ */
+.login {
+  background-color: #FCC602;
+  height: calc(100vh - 3.25rem);
+  padding-top: 9.0625rem;
+  padding-bottom: 8.625rem;
+}
+.login h1 {
+  font-weight: 700;
+}
+.login .container {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 26.25rem;
+  height: 25rem;
+  border-radius: 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-direction: column;
+}
+.login__error {
+  color: red;
+  font-size: 0.875rem;
+}
+.login__textbox {
+  width: 100%;
+  max-width: 21.875rem;
+  height: 2.5rem;
+  border-radius: 0.625rem;
+  border: 1px solid #888;
 }/*# sourceMappingURL=main.css.map */
