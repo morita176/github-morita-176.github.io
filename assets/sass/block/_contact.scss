@@ -1,0 +1,26 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* Contact
+------------------------------------------ */
+.contact {
+  margin: f.rem(40) auto f.rem(60);
+
+  & p {
+    margin-top: f.rem(20);
+    text-align: center;
+  }
+
+  &__btn {
+    margin-top: f.rem(20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: f.rem(20);
+
+    @include v.mq(pc) {
+      flex-direction: row;
+    }
+  }
+}

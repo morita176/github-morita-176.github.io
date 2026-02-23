@@ -1,0 +1,80 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* works
+------------------------------------------ */
+.works {
+  margin-top: f.rem(80);
+
+  &__attention {
+    background-color: v.$c-orange-li;
+    padding: f.rem(20) f.rem(16);
+
+    @include v.mq(pc) {
+      text-align: center;
+    }
+  }
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  margin: f.rem(40) auto;
+  gap: f.rem(40);
+
+  @include v.mq(pc) {
+    flex-direction: row;
+    gap: f.rem(30);
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__body {
+    border-radius: f.rem(20);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    padding: f.rem(10) f.rem(16);
+
+    & h3 {
+      padding-bottom: f.rem(10);
+      text-align: center;
+    }
+
+    & img {
+      width: auto;
+      height: 50px;
+
+    }
+
+    & dl {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      @include v.mq(pc) {
+        grid-template-columns: f.rem(85) 1fr;
+      }
+    }
+
+    & dt,
+    dd {
+      padding: f.rem(5) f.rem(10);
+      border-bottom: 2px solid v.$c-orange;
+    }
+
+    & dt {
+      font-weight: bold;
+    }
+
+    @include v.mq(sp) {
+      & dl dd:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+/* 案件一覧
+------------------------------------------ */

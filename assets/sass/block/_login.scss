@@ -1,0 +1,42 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* login
+------------------------------------------ */
+
+.login {
+  background-color: v.$c-orange;
+  height: calc(100vh - f.rem(52));
+  padding-top: f.rem(145);
+  padding-bottom: f.rem(138);
+
+  & h1 {
+    font-weight: 700;
+  }
+
+  & .container {
+    background-color: v.$c-white;
+    width: 90%;
+    max-width: f.rem(420);
+    height: f.rem(400);
+    border-radius: f.rem(10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: f.rem(10);
+    flex-direction: column;
+  }
+
+  &__error {
+    color: red;
+    font-size: f.rem(14);
+  }
+
+  &__textbox {
+    width: 100%;
+    max-width: f.rem(350);
+    height: f.rem(40);
+    border-radius: f.rem(10);
+    border: 1px solid v.$c-base;
+  }
+}

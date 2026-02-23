@@ -1,0 +1,79 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* Skills
+------------------------------------------ */
+.skills {
+  margin: f.rem(40) auto f.rem(60);
+
+  &__item {
+    padding: f.rem(30) f.rem(16) f.rem(20) f.rem(26);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: f.rem(20);
+    max-width: v.$width-wide;
+    margin: 0 auto;
+
+    @include v.mq(pc) {
+      flex-direction: row;
+    }
+  }
+
+  &__box {
+    padding: f.rem(10) f.rem(20) f.rem(20) f.rem(10);
+    position: relative;
+    z-index: 1;
+    background-color: v.$c-orange-li;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: f.rem(250);
+    color: v.$c-dark;
+
+    @include v.mq(pc) {
+      width: calc((100% / 3) - 10px);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 100%;
+      height: 100%;
+      border: solid 3px v.$c-orange;
+      z-index: -1;
+    }
+
+    &--s {
+      font-size: f.rem(14);
+    }
+
+    & ul {
+      flex-grow: 1;
+
+    }
+
+    & ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+    }
+
+    & ul li::before {
+      font-family: "bootstrap-icons";
+      content: '\F199';
+      color: #92C353;
+      flex-shrink: 0;
+    }
+  }
+
+  & h3 {
+    text-align: center;
+    font-size: f.rem(16);
+    padding-bottom: 10px;
+  }
+}

@@ -1,0 +1,45 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+
+/* ボタンのスタイル
+------------------------------------------ */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: f.rem(60);
+    width: f.rem(300);
+    border-radius: f.rem(30);
+    border: 2px solid v.$c-orange-dark;
+    background-color: v.$c-orange-dark;
+    color: v.$c-white;
+    font-size: f.rem(20);
+    position: relative;
+
+    &:hover {
+        background-color: v.$c-white;
+        color: v.$c-orange-dark;
+    }
+
+    &__login {
+        margin-top: f.rem(20);
+    }
+
+    &__list {
+        height: f.rem(50);
+        margin: f.rem(15) auto f.rem(10);
+        background-color: v.$c-white;
+        color: v.$c-orange-dark;
+
+        &:hover {
+            background-color: v.$c-orange-li;
+        }
+    }
+    &__bi{
+        position: absolute;
+        top: 50%;
+        right: 2vw;
+        transform: translateY(-50%);
+    }
+}
