@@ -1,5 +1,5 @@
 // ===== 設定 =====
-const PASSWORD = "morita2026";
+const PASSWORD = "U7fxPaQYVD";  // パスワード
 const REDIRECT_URL = "./list.html";
 
 // ===== 要素取得 =====
