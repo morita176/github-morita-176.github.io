@@ -4,7 +4,7 @@
 /* Skills
 ------------------------------------------ */
 .skills {
-  margin: f.rem(40) auto f.rem(60);
+  margin-top: f.rem(50);
 
   &__item {
     padding: f.rem(30) f.rem(16) f.rem(20) f.rem(26);
@@ -66,7 +66,7 @@
     & ul li::before {
       font-family: "bootstrap-icons";
       content: '\F199';
-      color: #92C353;
+      color: v.$c-green;
       flex-shrink: 0;
     }
   }

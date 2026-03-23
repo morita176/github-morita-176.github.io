@@ -33,7 +33,8 @@
         color: v.$c-orange-dark;
 
         &:hover {
-            background-color: v.$c-orange-li;
+            background-color: v.$c-orange-dark;
+            color: v.$c-white;
         }
     }
     &__bi{

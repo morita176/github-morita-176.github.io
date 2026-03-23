@@ -4,27 +4,38 @@
 /* works
 ------------------------------------------ */
 .works {
-  margin-top: f.rem(80);
+  margin-top: f.rem(40);
 
   &__attention {
-    background-color: v.$c-orange-li;
+    background-color: v.$c-purple;
     padding: f.rem(20) f.rem(16);
 
     @include v.mq(pc) {
       text-align: center;
     }
   }
+
+  &__item {
+    background-color: v.$c-orange;
+    padding-top: f.rem(20);
+    padding-bottom: f.rem(20);
+  }
 }
 
+/* 案件一覧
+------------------------------------------ */
+
 .work-card {
+  margin: f.rem(40) auto;
   display: flex;
   flex-direction: column;
-  margin: f.rem(40) auto;
+  justify-content: center;
   gap: f.rem(40);
+  width: 100%;
 
   @include v.mq(pc) {
-    flex-direction: row;
-    gap: f.rem(30);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
   }
 
   &__title {
@@ -33,21 +44,32 @@
     justify-content: space-between;
   }
 
+  &__img {
+    width: auto;
+    height: 50px;
+
+  }
+
   &__body {
-    border-radius: f.rem(20);
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
-    padding: f.rem(10) f.rem(16);
+    padding: 2em;
+    background-color: v.$c-orange-li;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 0;
+      border-width: 0 25px 25px 0;
+      border-style: solid;
+      border-color: v.$c-orange #fff v.$c-orange;
+    }
 
     & h3 {
       padding-bottom: f.rem(10);
       text-align: center;
     }
 
-    & img {
-      width: auto;
-      height: 50px;
-
-    }
 
     & dl {
       display: grid;
@@ -73,8 +95,117 @@
         border-bottom: none;
       }
     }
+
+    &--full {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: f.rem(40);
+    }
   }
 }
 
-/* 案件一覧
+.thumbnail {
+  width: 180px;
+  height: auto;
+}
+
+/* カルーセル
 ------------------------------------------ */
+.works-carousel {
+  margin: f.rem(40) auto 0;
+  max-width: v.$width-wide;
+
+  &__body {
+    margin: 10px;
+    padding: 10px;
+    background-color: v.$c-orange-dark;
+    position: relative;
+    outline: solid 4px v.$c-orange-dark;
+    outline-offset: 5px;
+    color: #fff;
+
+    @include v.mq(pc) {
+      margin: f.rem(16);
+      padding: f.rem(16);
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      right: 0;
+      bottom: 0;
+      border-width: 25px 25px 0 0;
+      border-style: solid;
+      border-color: v.$c-orange-dark #fff v.$c-orange-dark;
+      box-shadow: -3px -1px 2px rgba(0, 0, 0, 0.15);
+    }
+
+    & .work-card__title {
+      flex-direction: column;
+
+      @include v.mq(pc) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  & dt,
+  dd {
+    padding: f.rem(5) f.rem(10);
+    border-bottom: 2px dashed v.$c-orange-li;
+  }
+
+  & dt {
+    font-weight: bold;
+  }
+
+  @include v.mq(sp) {
+    & dl dd:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slick-slide {
+  transform: scale(0.8);
+  opacity: 0.6;
+  transition: transform 0.4s ease;
+  height: auto;
+}
+.slick-slide > div {
+  height: 100%;
+}
+
+.slide-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slick-center {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slick-dots {
+  bottom: -40px;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: f.rem(70);
+}
+
+.slick-dots li button:before {
+  font-size: f.rem(10);
+  color: v.$c-green;
+}
+
+.slick-dots li.slick-active button:before {
+  color: v.$c-green;
+}

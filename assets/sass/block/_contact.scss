@@ -10,6 +10,20 @@
     margin-top: f.rem(20);
     text-align: center;
   }
+  &__list{
+    margin: f.rem(20) auto;
+    padding: f.rem(20);
+    background-color: v.$c-orange-li;
+    & h3{
+      text-align: center;
+    }
+    & ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: f.rem(10);
+    }
+  }
 
   &__btn {
     margin-top: f.rem(20);

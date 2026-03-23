@@ -16,7 +16,7 @@
         <meta property="og:description" content="テックアカデミーでWeb制作を学び、副業として活動しているmorita176のポートフォリオサイトです。">
         <meta property="og:type" content="article">
         <meta property="og:url" content="https://morita176.github.io/github-morita-176.github.io/">
-        <meta property="og:image" content="">
+        <meta property="og:image" content="./assets/image/cover.jpg">
         <meta property="og:site_name" content="Web制作クリエイター：morita176">
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +26,9 @@
         <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
         <!-- Bootstrap Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!-- SlickのCSS -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
         <!-- CSS -->
         <link rel="stylesheet" href="./assets/style/main.css">
     </head>
@@ -59,13 +62,13 @@
             <section class="cover">
                 <div class="container">
                     <div class="cover__left">
-                        <img src="./assets/image/cover.jpg" alt="">
+                        <img src="./assets/image/cover.jpg" alt="morita176のプロフィール写真">
                     </div>
                     <div class="cover__right">
                         <div class="cover__title">
                             <h1 class="mplus">morita176</h1>
                         </div>
-                        <p><a href="https://techacademy.jp/" target="_blank">TechAcademy</a>にて「はじめての副業コース」「Web制作実践コース」を修了し、2026年2月に卒業しました。<br>現在はAzure構築の学習を進めながら、副業としてWeb制作（フロントエンド）の案件を請け負っています。</p>
+                        <p><a href="https://techacademy.jp/" target="_blank">TechAcademy</a>にて「はじめての副業コース」「Web制作実践コース」を修了し、2026年2月に卒業しました。<br>現在はITエンジニアとして働きながら、副業としてWeb制作案件に対応しております。<br>Azure構築の学習も進めており、インフラの知識を活かしたWeb制作を意識しています。</p>
                     </div>
                 </div>
             </section>
@@ -74,7 +77,7 @@
                 <h2 class="mplus"><span>A</span>bout Me</h2>
                 <div class="container about__item">
                     <div class="about__right">
-                        <p>富山県富山市在住。これまでに複数回の転職を経験し、現在はSEとして働いています。<br>約5年間、クラウド環境の運用・保守業務に従事してきました。<br>インフラエンジニアとしての実務経験を背景に、「作って終わり」ではなく、運用まで見据えたWeb制作を意識しています。</p>
+                        <p>富山県富山市在住。現在はSEとして勤務しています。<br>これまで約5年間、クラウド環境の運用・保守業務に携わってきました。<br><br>インフラエンジニアとしての経験を活かし、「作って終わり」ではなく運用や保守も意識したWeb制作を心がけています。</p>
                     </div>
                     <div class="about__left">
                         <img src="./assets/image/about.jpg" alt="">
@@ -118,14 +121,15 @@
             </section>
             <!-- works -->
             <section class="works" id="works">
-                <div class="container">
+
                     <h2 class="mplus"><span>W</span>orks</h2>
-                    <!-- 案件1 -->
-                    <div class="work-card">
-                        <div class="work-card__body">
+                    <!-- カルーセル -->
+                    <div class="carousel works-carousel">
+                        <!-- 案件1 -->
+                        <div class="works-carousel__body">
                             <div class="work-card__title">
                                 <h3 class="work-card__name">課題制作サイト<br>（TechAcademy様）</h3>
-                                <img src="./works/Kirameki_Farm/assets/image/bg_pc.png" alt="Kirameki Farm">
+                                <img src="../works/Kirameki_Farm/assets/image/bg_pc.png" alt="Kirameki Farm" class="work-card__img">
                             </div>
                             <dl>
                                 <dt>制作時間</dt>
@@ -137,10 +141,10 @@
                             </dl>
                         </div>
                         <!-- 案件2-->
-                        <div class="work-card__body">
+                        <div class="works-carousel__body">
                             <div class="work-card__title">
                                 <h3 class="work-card__name">課題制作サイト<br>（TechAcademy様）</h3>
-                                <img src="./works/KIRAMEKI_BEAUTY_LABO/assets/image/logo.png" alt="KIRAMEKI BEAUTY LABO">
+                                <img src="../works/KIRAMEKI_BEAUTY_LABO/assets/image/logo.png" alt="KIRAMEKI BEAUTY LABO" class="work-card__img">
                             </div>
                             <dl>
                                 <dt>制作時間</dt>
@@ -151,29 +155,62 @@
                                 <dd>HTML / CSS / JavaScript</dd>
                             </dl>
                         </div>
+                        <!-- 案件3 -->
+                        <div class="works-carousel__body">
+                            <div class="work-card__title">
+                                <h3 class="work-card__name">AI画像生成案件</h3>
+                                <img src="../works/ai-image/20260321_fortune_teller_image.png" alt="占い師キャラクター" class="work-card__img">
+                            </div>
+                            <dl>
+                                <dt>制作時間</dt>
+                                <dd>2時間</dd>
+                                <dt>ツール</dt>
+                                <dd>SeaArt</dd>
+                                <dt>実績</dt>
+                                <dd>クライアントより★5評価を獲得</dd>
+                            </dl>
+                        </div>
                     </div>
-                </div>
+
                 <div class="works__attention">
                     <p>実際のサイトなど、制作実績については、守秘義務および利用規約の関係上、限定公開にてご案内しております。<br>ご興味をお持ちいただけましたら、お問い合わせよりご連絡ください。</p>
                 </div>
             </section>
-            <!-- contact
+            <!-- contact -->
             <section class="contact" id="contact">
                 <div class="container">
                     <h2 class="mplus"><span>C</span>ontact</h2>
-                    <p>以下クラウドソーシングにて案件を受けて回っております。<br>お手数ですが、サイトよりお問い合わせください。</p>
-                    <div class="contact__btn">
-                        <a href="https://www.lancers.jp/profile/morita176" class="button" target="_blank">ランサーズ様<i class="bi bi-chevron-right button__bi"></i></a>
-                        <a href="https://crowdworks.jp/public/employees/6838525" class="button" target="_blank">クラウドワークス様<i class="bi bi-chevron-right button__bi"></i></a>
+                    <p>お仕事のご相談・ご依頼は以下よりご連絡ください。<br>現在、副業としてWeb制作案件をメインにお受けしております。</p>
+                    <div class="contact__list">
+                        <h3>対応可能な業務</h3>
+                        <ul>
+                            <li>HTML / CSS コーディング</li>
+                            <li>レスポンシブ対応</li>
+                            <li>LPコーディング</li>
+                            <li>AI画像生成</li>
+                        </ul>
                     </div>
+                    <p>
+                        クラウドソーシングからのご連絡をお願いいたします。<br>
+                    </p>
+                    <ul class="contact__btn">
+                        <li><a href="https://www.lancers.jp/profile/morita176" class="button" target="_blank">ランサーズ様<i class="bi bi-chevron-right button__bi"></i></a></li>
+                        <li><a href="https://crowdworks.jp/public/employees/6838525" class="button" target="_blank">クラウドワークス様<i class="bi bi-chevron-right button__bi"></i></a></li>
+                    </ul>
                 </div>
-            </section> -->
+            </section>
         </main>
 
         <!-- footer -->
         <footer class="footer">
             <p>Copyright &copy; 2026 morita176 All Rights Reserved.</p>
         </footer>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- SlickのJS -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <!-- js -->
+        <script src="./assets/script/main.js"></script>
     </body>
 
 </html>

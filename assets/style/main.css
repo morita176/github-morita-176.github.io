@@ -275,7 +275,8 @@ ul {
   color: #F5BB06;
 }
 .button__list:hover {
-  background-color: #FEF5D1;
+  background-color: #F5BB06;
+  color: #ffffff;
 }
 .button__bi {
   position: absolute;
@@ -505,7 +506,7 @@ h2 span::before {
 /* About Me
 ------------------------------------------ */
 .about {
-  margin: 2.5rem auto 3.75rem;
+  margin-top: 2.5rem;
 }
 .about__item {
   padding-top: 1rem;
@@ -537,7 +538,7 @@ h2 span::before {
 /* Skills
 ------------------------------------------ */
 .skills {
-  margin: 2.5rem auto 3.75rem;
+  margin-top: 3.125rem;
 }
 .skills__item {
   padding: 1.875rem 1rem 1.25rem 1.625rem;
@@ -607,10 +608,10 @@ h2 span::before {
 /* works
 ------------------------------------------ */
 .works {
-  margin-top: 5rem;
+  margin-top: 2.5rem;
 }
 .works__attention {
-  background-color: #FEF5D1;
+  background-color: #EDDDFD;
   padding: 1.25rem 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -618,17 +619,26 @@ h2 span::before {
     text-align: center;
   }
 }
+.works__item {
+  background-color: #FCC602;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
 
+/* 案件一覧
+------------------------------------------ */
 .work-card {
+  margin: 2.5rem auto;
   display: flex;
   flex-direction: column;
-  margin: 2.5rem auto;
+  justify-content: center;
   gap: 2.5rem;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .work-card {
-    flex-direction: row;
-    gap: 1.875rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
   }
 }
 .work-card__title {
@@ -636,18 +646,27 @@ h2 span::before {
   align-items: center;
   justify-content: space-between;
 }
+.work-card__img {
+  width: auto;
+  height: 50px;
+}
 .work-card__body {
-  border-radius: 1.25rem;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
-  padding: 0.625rem 1rem;
+  padding: 2em;
+  background-color: #FEF5D1;
+  position: relative;
+}
+.work-card__body::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  border-width: 0 25px 25px 0;
+  border-style: solid;
+  border-color: #FCC602 #fff #FCC602;
 }
 .work-card__body h3 {
   padding-bottom: 0.625rem;
   text-align: center;
-}
-.work-card__body img {
-  width: auto;
-  height: 50px;
 }
 .work-card__body dl {
   display: grid;
@@ -671,9 +690,115 @@ h2 span::before {
     border-bottom: none;
   }
 }
+.work-card__body--full {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
 
-/* 案件一覧
+.thumbnail {
+  width: 180px;
+  height: auto;
+}
+
+/* カルーセル
 ------------------------------------------ */
+.works-carousel {
+  margin: 2.5rem auto 0;
+  max-width: 1080px;
+}
+.works-carousel__body {
+  margin: 10px;
+  padding: 10px;
+  background-color: #F5BB06;
+  position: relative;
+  outline: solid 4px #F5BB06;
+  outline-offset: 5px;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .works-carousel__body {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+.works-carousel__body::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  border-width: 25px 25px 0 0;
+  border-style: solid;
+  border-color: #F5BB06 #fff #F5BB06;
+  box-shadow: -3px -1px 2px rgba(0, 0, 0, 0.15);
+}
+.works-carousel__body .work-card__title {
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .works-carousel__body .work-card__title {
+    flex-direction: row;
+  }
+}
+.works-carousel dt,
+.works-carousel dd {
+  padding: 0.3125rem 0.625rem;
+  border-bottom: 2px dashed #FEF5D1;
+}
+.works-carousel dt {
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .works-carousel dl dd:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slick-slide {
+  transform: scale(0.8);
+  opacity: 0.6;
+  transition: transform 0.4s ease;
+  height: auto;
+}
+
+.slick-slide > div {
+  height: 100%;
+}
+
+.slide-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slick-center {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slick-dots {
+  bottom: -40px;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 4.375rem;
+}
+
+.slick-dots li button:before {
+  font-size: 0.625rem;
+  color: #92C353;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #92C353;
+}
+
 /* Contact
 ------------------------------------------ */
 .contact {
@@ -682,6 +807,20 @@ h2 span::before {
 .contact p {
   margin-top: 1.25rem;
   text-align: center;
+}
+.contact__list {
+  margin: 1.25rem auto;
+  padding: 1.25rem;
+  background-color: #FEF5D1;
+}
+.contact__list h3 {
+  text-align: center;
+}
+.contact__list ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.625rem;
 }
 .contact__btn {
   margin-top: 1.25rem;
