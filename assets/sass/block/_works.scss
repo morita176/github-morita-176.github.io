@@ -4,7 +4,7 @@
 /* works
 ------------------------------------------ */
 .works {
-  margin-top: f.rem(40);
+  margin-top: f.rem(96);
 
   &__attention {
     background-color: v.$c-purple;
@@ -45,9 +45,12 @@
   }
 
   &__img {
-    width: auto;
-    height: 50px;
+    width: 80%;
+    height: auto;
 
+    @include v.mq(pc) {
+      width: 50%;
+    }
   }
 
   &__body {
@@ -178,7 +181,8 @@
   transition: transform 0.4s ease;
   height: auto;
 }
-.slick-slide > div {
+
+.slick-slide>div {
   height: 100%;
 }
 

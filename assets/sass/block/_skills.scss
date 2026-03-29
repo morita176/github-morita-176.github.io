@@ -4,10 +4,10 @@
 /* Skills
 ------------------------------------------ */
 .skills {
-  margin-top: f.rem(50);
+  margin-top: f.rem(96);
 
   &__item {
-    padding: f.rem(30) f.rem(16) f.rem(20) f.rem(26);
+    padding: f.rem(30) f.rem(16) f.rem(20) f.rem(34);
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -18,6 +18,7 @@
 
     @include v.mq(pc) {
       flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 
@@ -29,12 +30,13 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap:24px;
     height: auto;
     min-height: f.rem(250);
     color: v.$c-dark;
 
     @include v.mq(pc) {
-      width: calc((100% / 3) - 10px);
+      width: calc((100% / 3) - 16px);
     }
 
     &::before {
@@ -50,6 +52,9 @@
 
     &--s {
       font-size: f.rem(14);
+    }
+    &--wide{
+      width: 100%;
     }
 
     & ul {

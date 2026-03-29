@@ -8,6 +8,6 @@
   @include v.mq(pc) {
     padding: 0 f.rem(22);
     width: 100%;
-    max-width: v.$width-main;
+    max-width: v.$width-wide;
   }
 }
