@@ -4,7 +4,7 @@
 
 $('.works-carousel').slick({
   autoplay: true, // 自動再生
-  autoplaySpeed: 2000, // 自動再生の速さ、単位はミリ秒
+  autoplaySpeed: 4000, // 自動再生の速さ、単位はミリ秒
   arrows: true, // 左右のナビゲーションを有効
   dots: true, // ドットを表示
   centerMode: true,
