@@ -652,7 +652,7 @@ h2 span::before {
   justify-content: space-between;
 }
 .work-card__img {
-  width: 80%;
+  width: 40%;
   height: auto;
 }
 @media screen and (min-width: 768px) {
