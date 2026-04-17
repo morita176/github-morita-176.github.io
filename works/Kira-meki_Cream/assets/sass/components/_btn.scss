@@ -1,0 +1,52 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* ボタンの共通スタイル
+------------------------------------------ */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: f.rem(40);
+    font-weight: v.$f-semibold;
+    font-size: f.rem(18);
+    color: v.$c-white;
+    width: f.rem(300);
+    height: f.rem(58);
+
+    &__on {
+        background-color: v.$c-green-on;
+
+        @media screen and (min-width: v.$width-main) {
+            margin-right: f.rem(32);
+        }
+    }
+
+    &__buy {
+        background-color: v.$c-green-buy;
+    }
+}
+
+
+/* ページトップへ戻るボタン
+------------------------------------------ */
+.button-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: f.rem(16);
+    right: 4%;
+    width: f.rem(40);
+    height: f.rem(42);
+    color: v.$c-white;
+    background-color: v.$c-blue;
+    @include v.mq(pc) {
+        right: 10%;
+    }
+}
+
+/* footer 上に来た時の状態 */
+.button-to-top.is-footer {
+    position: absolute;
+}

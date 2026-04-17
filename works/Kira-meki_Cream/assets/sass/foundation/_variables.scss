@@ -1,0 +1,97 @@
+// 変数定義
+
+//-----------------------------------
+//Font
+//------------------------------------
+
+// Font Family
+$f-main: 'Noto Serif JP',
+serif;
+
+// Font Noto Serif
+$f-Serif: 'Noto Serif JP',
+serif;
+
+// Font Marcellus
+$f-marcellus: 'Marcellus',
+serif;
+
+// Font EB Garamond
+$f-eb-garamond: 'EB Garamond',
+serif;
+
+// root Size
+$fz-root: 16;
+
+// fontサイズ: ;
+$f-regular: 400;
+$f-medium:500;
+$f-semibold:600;
+$f-bold:700;
+
+
+// Font Size rem変換
+@mixin rem($size) {
+  font-size: calc(($size / $fz-root) * 1rem);
+}
+
+// Line height
+$lh-main: 1.75;
+
+//line-heightをpxから算出
+@mixin lh($font-size, $height) {
+  line-height: calc($height / $font-size);
+}
+
+
+//-----------------------------------
+//Color
+//-----------------------------------
+$c-base: #000;
+$c-black:#111;
+$c-white:#ffffff;
+$c-blue:#0071CE;
+$c-green-on:#46C4DB;
+$c-green-buy:#5DD5AB;
+$c-green-arrow:#00AFBF;
+$c-li-green:#DBF7F9;
+$c-gray:#F0F4FF;
+$c-gray-dot:#eee;
+
+//-----------------------------------
+//Pass
+//-----------------------------------
+$pass: '../images/';
+
+
+//-----------------------------------
+//Break Point
+//-----------------------------------
+$breakpoints: (sp: 'screen and (max-width: 767px)',
+  pc: 'screen and (min-width: 768px)',
+  pc-wide: 'screen and (min-width: 1032px)',
+);
+
+
+// -----------------------------------
+// media query
+// -----------------------------------
+@mixin mq($bp) {
+  @media #{map-get($breakpoints, $bp)} {
+    @content;
+  }
+}
+
+
+//-----------------------------------
+//Base Width
+//-----------------------------------
+$base-width-sp: 390;
+$base-width-pc: 1920;
+
+
+//-----------------------------------
+//Contents Width
+//-----------------------------------
+$width-main: 950px;
+$width-wide: 1000px;

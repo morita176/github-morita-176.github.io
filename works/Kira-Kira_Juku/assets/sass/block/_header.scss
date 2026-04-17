@@ -1,0 +1,129 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* header
+------------------------------------------ */
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: clamp(f.rem(70), 8.5vw, f.rem(101));
+  background-color: v.$c-white;
+  box-shadow: 0 2px 8px v.$c-shadow;
+  z-index: 1;
+
+  &__inner {
+    max-width: v.$width-wide;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // ロゴ
+  &__logo {
+    margin-left: f.rem(16);
+    width: clamp(10.375rem,
+        calc(4.9rem + 11.25vw),
+        15.0625rem);
+
+    @include v.mq(pc) {
+      margin-left: f.rem(19);
+    }
+
+  }
+}
+
+/* ハンバーガーボタン
+------------------------------------------ */
+.hamburger {
+  &__button {
+    font-size: clamp(f.rem(45), 2vw, f.rem(70));
+    color: v.$c-white;
+    background-color: v.$c-blue;
+    width: clamp(f.rem(70), 4vw, f.rem(101));
+    height: clamp(f.rem(70), 4vw, f.rem(101));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include v.mq(pc) {
+      display: none;
+    }
+  }
+}
+
+
+
+/* ハンバーガーメニュー
+------------------------------------------ */
+@include v.mq(sp) {
+  .hamburger-menu {
+    position: fixed;
+    top: f.rem(70);
+    right: 0;
+    left: 0;
+    transition: opacity .4s ease-in;
+    opacity: 0;
+    visibility: hidden;
+    background-color: v.$c-blue;
+    font-size: f.rem(18);
+
+  }
+
+  // メニュー一覧
+  .hamburger-nav-list {
+    display: flex;
+    flex-direction: column;
+
+    & a {
+      color: v.$c-white;
+    }
+
+    & li {
+      font-weight: v.$f-medium;
+      margin: f.rem(15) f.rem(18) 0;
+      padding-bottom: f.rem(15);
+      border-bottom: f.rem(1) solid v.$c-white;
+    }
+  }
+
+  // 矢印の位置の指定
+  .arrow-hidden {
+    padding-right: f.rem(11);
+  }
+}
+
+/* スライドイン後の位置の指定 */
+.hamburger-nav-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* PC版 */
+@include v.mq(pc) {
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    column-gap: f.rem(8);
+    font-size: f.rem(20);
+  }
+
+  .hamburger-nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5vw;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: f.rem(42);
+  }
+
+  .arrow-hidden {
+    display: none;
+  }
+}

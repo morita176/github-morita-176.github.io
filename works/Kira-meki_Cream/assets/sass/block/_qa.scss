@@ -1,0 +1,97 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* Q&A
+------------------------------------------ */
+
+.qa {
+  background: linear-gradient(to right, #F4FFE8, #C6F0FE);
+  padding: f.rem(25) 1rem f.rem(36);
+
+  @include v.mq(pc) {
+    padding-top: f.rem(30);
+    padding-bottom: f.rem(41);
+  }
+
+  &__inner {
+    margin: f.rem(40) auto 0;
+
+    @include v.mq(pc) {
+      max-width: f.rem(600);
+      margin-top: f.rem(46);
+    }
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(f.rem(20), 1rem + 1vw, f.rem(26));
+
+  &__common {
+    display: flex;
+    column-gap: f.rem(12);
+    font-weight: v.$f-medium;
+    @include v.mq(pc) {
+      column-gap: f.rem(17);
+    }
+
+    &--ico {
+      @include v.mq(pc) {
+        font-size: f.rem(18);
+      }
+    }
+
+    &--text {
+      font-size: f.rem(15);
+      line-height: 1.85;
+    }
+  }
+}
+
+/* アコーディオンの質問部分 */
+.accordion-section {
+  background-color: v.$c-white;
+  position: relative;
+  padding: f.rem(19) f.rem(21) f.rem(13) f.rem(16);
+
+  @include v.mq(pc) {
+    padding: f.rem(22) 0 f.rem(15) f.rem(24);
+  }
+}
+
+/* アコーディオンのコンテンツ部分 */
+.accordion-content {
+  display: none;
+  background-color: v.$c-white;
+  padding: 0 f.rem(15) f.rem(30);
+
+  @include v.mq(pc) {
+    padding: 0 f.rem(25) f.rem(22) f.rem(23);
+  }
+}
+
+/* 初期状態を表示するとき用のクラス */
+.accordion-content-active {
+  display: block;
+}
+
+/* 矢印アイコン */
+.bi-caret-down-fill {
+  position: absolute;
+  top: 30%;
+  right: 4%;
+  line-height: 1;
+  cursor: pointer;
+  font-size: f.rem(15);
+  transition: transform 0.3s ease;
+  @include v.mq(pc) {
+    font-size: f.rem(18);
+    top: 38%;
+  }
+}
+
+/* 矢印アイコンの向きを変える*/
+.bi-caret-down-fill.open::before {
+  transform: rotate(180deg);
+}

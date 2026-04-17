@@ -1,0 +1,32 @@
+@use './variables' as v;
+@use './functions' as f;
+
+
+/* 共通事項
+------------------------------------------ */
+body {
+  font-family: v.$f-main;
+  line-height: v.$lh-main;
+  @include v.rem(16);
+  color: v.$c-base;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 1s;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+ul {
+  list-style: none;
+}

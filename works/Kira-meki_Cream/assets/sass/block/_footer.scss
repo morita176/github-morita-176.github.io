@@ -1,0 +1,74 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* footer
+------------------------------------------ */
+
+.footer {
+  background-color: v.$c-blue;
+  color: v.$c-white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: f.rem(16) 0 f.rem(22);
+
+  @media screen and (min-width: v.$width-main) {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: f.rem(20);
+  }
+
+  @media screen and (min-width: 1200px) {
+    column-gap: f.rem(155);
+    padding-top: f.rem(22);
+  }
+
+  &__top {
+
+    & p {
+      font-size: f.rem(28);
+      letter-spacing: 5.5px;
+
+      @include v.mq(pc) {
+        font-size: f.rem(32);
+        letter-spacing: 6px;
+      }
+    }
+  }
+
+  &__midst {
+    padding-top: f.rem(15);
+
+    @include v.mq(pc) {
+      padding-top: 0;
+      padding-left: f.rem(49);
+    }
+
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      column-gap: f.rem(30);
+      font-size: f.rem(12);
+
+      @include v.mq(pc) {
+        font-size: f.rem(14);
+      }
+    }
+  }
+
+  &__bottom {
+    padding-top: f.rem(20);
+
+    @include v.mq(pc) {
+      padding-top: 0;
+    }
+
+    p {
+      font-size: f.rem(11);
+
+      @include v.mq(pc) {
+        font-size: f.rem(12);
+      }
+    }
+  }
+}

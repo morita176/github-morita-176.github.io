@@ -1,0 +1,77 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* footer
+------------------------------------------ */
+
+.footer {
+  &__top {
+    display: flex;
+    flex-direction: column;
+
+    @include v.mq(pc) {
+      flex-direction: row;
+    }
+
+    &--item {
+      position: relative;
+      width: 100%;
+      height: clamp(f.rem(170), 18vw, f.rem(320));
+      overflow: hidden;
+      text-decoration: none;
+      &>a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  //画像枠
+  &__qa {
+    background: url(../image/pht_qa_sp.png) left top / cover no-repeat;
+
+    @include v.mq(pc) {
+      background-image: url(../image/pht_qa.jpg);
+    }
+  }
+
+  &__classrooms {
+    background: url(../image/pht_classrooms_sp.png) left / cover no-repeat;
+
+    @include v.mq(pc) {
+      background-image: url(../image/pht_classrooms.jpg);
+    }
+  }
+
+  &__text {
+    position: absolute;
+    font-size: clamp(f.rem(22), 2vw, f.rem(32));
+    font-weight: v.$f-bold;
+    color: v.$c-white;
+    padding-left: f.rem(16);
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+    @include v.mq(pc) {
+      justify-content: center;
+      padding-left: 0;
+    }
+  }
+
+  &__bottom {
+    font-size: f.rem(13);
+    background-color: v.$c-gray;
+    height: clamp(f.rem(84), 6.2vw, f.rem(120));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4vw;
+
+    @include v.mq(pc) {
+      padding-left: 0;
+    }
+  }
+}

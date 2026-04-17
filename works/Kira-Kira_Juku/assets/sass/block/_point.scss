@@ -1,0 +1,90 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* point
+------------------------------------------ */
+.point {
+  margin-top: f.rem(34);
+
+  @include v.mq(pc) {
+    margin-top: f.rem(128);
+  }
+
+  &--1 {
+    font-size: clamp(f.rem(40), 3.9vw, f.rem(54));
+  }
+
+  &--2 {
+    font-size: clamp(f.rem(36), 3.4vw, f.rem(42));
+        padding-left: clamp(5px, 0.6vw, 8px);
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: clamp(f.rem(16), 3vw, f.rem(35));
+      margin-bottom: f.rem(37);
+      &--left{
+        margin-bottom: f.rem(32);
+      }
+
+      @include v.mq(pc) {
+        flex-direction: row;
+        align-items: start;
+        margin-bottom: f.rem(33);
+
+        &>* {
+          flex: 1 1 min(100%, f.rem(500));
+        }
+
+        &--left {
+          flex-direction: row-reverse
+        }
+      }
+
+      &--1 {
+        margin-bottom: clamp(f.rem(34), 4.5vw, f.rem(58));
+      }
+
+      &--img {
+        object-fit: cover;
+        object-position: left top;
+        aspect-ratio: 375 / 242;
+        display: block;
+      }
+
+      &--num {
+        font-weight: v.$f-bold;
+        font-size: clamp(f.rem(24), 2.2vw, f.rem(28));
+        font-style: italic;
+
+        @include v.mq(pc) {
+          margin-top: f.rem(13);
+        }
+      }
+
+      &--ti {
+        font-weight: v.$f-bold;
+        font-size: clamp(f.rem(20), 2.1vw, f.rem(24));
+        line-height:1.4;
+        margin-top: clamp(2px, 0.4vw, 5px);
+        @include v.mq(pc) {
+          line-height: 1.7;
+        }
+      }
+
+      &--text {
+        line-height: 1.75;
+        margin-top: clamp(10px, 1vw, 15px);
+      }
+    }
+  }
+
+  h2 {
+    font-size: clamp(f.rem(28), 2.3vw, f.rem(36));
+    font-weight: v.$f-bold;
+    text-align: center;
+    margin-bottom: clamp(f.rem(25), 3.3vw, f.rem(51));
+  }

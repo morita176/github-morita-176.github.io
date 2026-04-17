@@ -1,0 +1,11 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+.container {
+  margin: 0 auto;
+  padding: 0 f.rem(17);
+  max-width: v.$width-wide;
+      @include v.mq(pc) {
+        padding: 0 f.rem(22);
+      }
+}

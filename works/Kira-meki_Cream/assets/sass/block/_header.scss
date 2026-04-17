@@ -1,0 +1,21 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* header
+------------------------------------------ */
+.header {
+  position: absolute;
+  top: clamp(f.rem(17), 0.6rem + 1.2vw, f.rem(25));
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+
+  & p {
+    font-size: clamp(f.rem(24), 1.2rem + 0.8vw, f.rem(28));
+    text-align: center;
+    letter-spacing: clamp(f.rem(5), 0.2rem + 0.3vw, f.rem(6));
+    padding-left: f.rem(4);
+
+  }
+}

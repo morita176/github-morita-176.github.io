@@ -1,0 +1,28 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* contact
+------------------------------------------ */
+
+.contact {
+  background-color: v.$c-li-pink;
+  text-align: center;
+  line-height: 1.7;
+  padding-top: clamp(f.rem(42), 4vw, f.rem(54));
+  padding-bottom: clamp(f.rem(39), 3.4vw, f.rem(54));
+
+  &--2 {
+    padding-top: clamp(f.rem(39), 3.4vw, f.rem(54));
+  }
+
+  @include v.mq(pc) {
+    & br {
+      display: none;
+    }
+    &__button{
+      display: flex;
+      justify-content: center;
+      gap: 5vw;
+    }
+  }
+}

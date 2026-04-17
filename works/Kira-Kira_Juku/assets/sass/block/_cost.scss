@@ -1,0 +1,80 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* cost
+------------------------------------------ */
+
+.cost {
+  margin-top: clamp(f.rem(67), 4.8vw, f.rem(81));
+  margin-bottom: clamp(f.rem(62), 4.3vw, f.rem(75));
+  font-size: clamp(f.rem(16), 1.2vw, f.rem(18));
+  &__table {
+    margin-top: clamp(f.rem(24), 2.4vw, f.rem(42));
+    margin-inline: auto;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #ccc;
+    text-align: center;
+    table-layout: fixed;
+
+    @include v.mq(pc) {
+      max-width: f.rem(600);
+    }
+
+    &--right {
+      width: 34%;
+
+      @include v.mq(pc) {
+        width: 24%;
+      }
+    }
+
+    &--left {
+      padding-right: f.rem(12);
+
+      @include v.mq(pc) {
+        padding-right: 0;
+      }
+    }
+
+    &--left2 {
+      padding-right: f.rem(10);
+      line-height: 1;
+
+      @include v.mq(pc) {
+        padding-right: 0;
+      }
+    }
+
+    &--left3 {
+      padding-left: f.rem(16);
+
+      @include v.mq(pc) {
+        padding-left: 0;
+        padding-top: f.rem(7);
+      }
+    }
+  }
+
+  &__col {
+    background-color: #f5f5f5;
+  }
+
+  &__row {
+    border: 1px solid #ccc;
+
+    &--left {
+      font-size: clamp(f.rem(28), 1.9vw, f.rem(32));
+      font-weight: v.$f-bold;
+    }
+  }
+}
+
+tr {
+  height: clamp(f.rem(64), 4.2vw, f.rem(77));
+}
+
+td,
+th {
+  vertical-align: middle;
+}

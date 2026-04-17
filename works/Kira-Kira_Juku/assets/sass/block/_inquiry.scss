@@ -1,0 +1,50 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+
+/* ボタン3つ
+------------------------------------------ */
+.inquiry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: clamp(f.rem(12), 1.5vw, f.rem(20));
+  margin: f.rem(23) auto 0;
+
+  @include v.mq(pc) {
+    position: absolute;
+    flex-direction: row;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -40px;
+  }
+  @media screen and (min-width: 1500px) {
+    width: 100%;
+    max-width: f.rem(1100);
+    justify-content: space-between;
+  }
+
+  &__common {
+    color: v.$c-white;
+    width: 67vw;
+    height: clamp(f.rem(48), 6vw, f.rem(75));
+    font-size: clamp(f.rem(16), 2.5vw, f.rem(24));
+
+    @include v.mq(pc) {
+      width: clamp(f.rem(250), 20vw, f.rem(340));
+    }
+  }
+
+  &__green {
+    background-color: v.$c-green;
+  }
+
+  &__orange {
+    background-color: v.$c-orange;
+  }
+
+  &__skyblue {
+    background-color: v.$c-skyblue;
+  }
+}

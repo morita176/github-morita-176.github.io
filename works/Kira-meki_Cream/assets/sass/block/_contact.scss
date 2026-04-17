@@ -1,0 +1,70 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* contact
+------------------------------------------ */
+
+.contact {
+  background-color: v.$c-gray;
+  margin: f.rem(156) f.rem(16) f.rem(48);
+  max-width: v.$width-wide;
+
+  @include v.mq(pc-wide) {
+    margin: f.rem(47) auto f.rem(48);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: f.rem(20) 0 f.rem(35);
+    row-gap: f.rem(20);
+
+    @media screen and (min-width: v.$width-main) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: f.rem(40) f.rem(24);
+    }
+
+    @media screen and (min-width: 1040px) {
+      padding-left: f.rem(48);
+      padding-right: f.rem(48);
+    }
+
+  }
+
+  &__top {
+    color: v.$c-black;
+    text-align: center;
+
+    @media screen and (min-width: v.$width-main) {
+      text-align: left;
+    }
+
+    @media screen and (min-width: 1040px) {
+      padding-right: f.rem(64);
+    }
+
+    &--text {
+      font-size: f.rem(18);
+      letter-spacing: 2px;
+      @include v.mq(pc) {
+        font-size: f.rem(24);
+      }
+    }
+
+    &--price {
+      font-size: f.rem(14);
+      letter-spacing: 1.5px;
+      line-height: 1.5;
+            @include v.mq(pc) {
+        font-size: f.rem(16);
+      }
+    }
+  }
+}
+
+.contact2 {
+  margin-top: f.rem(50);
+  margin-bottom: f.rem(48);
+}
