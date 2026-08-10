@@ -26,6 +26,10 @@
   }
 
   &__right {
+    display: flex;
+    flex-direction: column;
+    gap: f.rem(16);
+
     @include v.mq(pc) {
       width: 50%;
     }

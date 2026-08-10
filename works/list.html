@@ -14,19 +14,21 @@
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/image/favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/image/favicon_io/favicon-16x16.png">
         <link rel="apple-touch-icon" href="../assets/image/favicon_io/apple-touch-icon.png">
-        <title>【ポートフォリオ】Web制作クリエイター：morita176</title>
-        <meta name="description" content="テックアカデミーでWeb制作を学び、副業として活動しているmorita176のポートフォリオサイトです。">
+        <title>【Web制作】morita176 ポートフォリオ</title>
+        <meta name="description" content="Web制作を中心に、HTML・CSS・JavaScript・Sassなどを使ったコーディングに取り組んでいます。ライティングでは旅行や日常をテーマにした文章を制作しています。">
         <meta name="keywords" content="">
-        <meta property="og:title" content="Web制作クリエイター：morita176">
-        <meta property="og:description" content="テックアカデミーでWeb制作を学び、副業として活動しているmorita176のポートフォリオサイトです。">
+        <meta property="og:title" content="Web制作・ライティング｜morita176 ポートフォリオ">
+        <meta property="og:description" content="Web制作を中心に、HTML・CSS・JavaScript・Sassなどを使ったコーディングに取り組んでいます。ライティングでは旅行や日常をテーマにした文章を制作しています。">
         <meta property="og:type" content="article">
         <meta property="og:url" content="https://morita176.github.io/github-morita-176.github.io/">
-        <meta property="og:image" content="">
-        <meta property="og:site_name" content="Web制作クリエイター：morita176">
+        <meta property="og:image" content="./assets/image/cover.jpg">
+        <meta property="og:site_name" content="Web制作・ライティング｜morita176 ポートフォリオ">
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Noto+Sans+JP:wght@100..900&family=Quicksand:wght@300..700&display=swap"
+            rel="stylesheet">
         <!-- リセットCSS -->
         <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
         <!-- Bootstrap Icons -->
@@ -39,7 +41,7 @@
 
     <body>
         <header class="header">
-            <a class="header__logo mplus" href="../">morita176</a>
+            <a class="header__logo quicksand" href="../">morita176</a>
 
             <!-- 開閉用チェックボックス -->
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -51,10 +53,12 @@
 
             <!-- メニュー -->
             <nav class="hamburger-menu">
-                <ul class="hamburger-nav-list mplus">
+                <ul class="hamburger-nav-list quicksand">
                     <li><a href="../#about">About Me</a></li>
                     <li><a href="../#skills">Skills</a></li>
-                    <li><a href="../#works">Works</a></li>
+                    <li><a href="./list.html">Works</a></li>
+                    <li><a href="../#writing">Writing</a></li>
+                    <li><a href="../#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -63,13 +67,14 @@
             <!-- works -->
             <section class="works" id="works">
                 <div class="container">
-                    <h2 class="mplus"><span>W</span>orks</h2>
+                    <h2 class="quicksand"><span>W</span>orks</h2>
                     <div class="work-card">
                         <!-- 案件1 -->
                         <div class="work-card__body">
                             <div class="work-card__title">
                                 <h3 class="work-card__name">LPコーディング<br>（TechAcademy課題1）</h3>
-                                <img src="../assets/image/screenshot/Kira-Kira_Juku.jpg" alt="Kira-Kira Juku" class="work-card__img">
+                                <img src="../assets/image/screenshot/Kira-Kira_Juku.jpg" alt="Kira-Kira Juku"
+                                    class="work-card__img">
                             </div>
                             <dl>
                                 <dt>制作時間</dt>
@@ -79,13 +84,15 @@
                                 <dt>使用技術</dt>
                                 <dd>HTML / CSS / JavaScript</dd>
                             </dl>
-                            <a href="../works/Kira-Kira_Juku/index.html" class="button button__list" target="_blank">サイトを見る<i class="bi bi-chevron-right button__bi"></i></a>
+                            <a href="../works/Kira-Kira_Juku/index.html" class="button button__list"
+                                target="_blank">サイトを見る<i class="bi bi-chevron-right button__bi"></i></a>
                         </div>
                         <!-- 案件2 -->
                         <div class="work-card__body">
                             <div class="work-card__title">
                                 <h3 class="work-card__name">LPコーディング<br>（TechAcademy課題2）</h3>
-                                <img src="../assets/image/screenshot/Kirameki_Cream.jpg" alt="Kira-meki Cream" class="work-card__img">
+                                <img src="../assets/image/screenshot/Kirameki_Cream.jpg" alt="Kira-meki Cream"
+                                    class="work-card__img">
                             </div>
                             <dl>
                                 <dt>制作時間</dt>
@@ -95,13 +102,15 @@
                                 <dt>使用技術</dt>
                                 <dd>HTML / CSS / JavaScript</dd>
                             </dl>
-                            <a href="../works/Kira-meki_Cream/index.html" class="button button__list" target="_blank">サイトを見る<i class="bi bi-chevron-right button__bi"></i></a>
+                            <a href="../works/Kira-meki_Cream/index.html" class="button button__list"
+                                target="_blank">サイトを見る<i class="bi bi-chevron-right button__bi"></i></a>
                         </div>
                         <!-- 案件3 -->
                         <div class="work-card__body">
                             <div class="work-card__title">
                                 <h3 class="work-card__name">LPコーディング<br>（TechAcademy課題3）</h3>
-                                <img src="../assets/image/screenshot/Kirameki_Farm.jpg" alt="Kirameki Farm" class="work-card__img">
+                                <img src="../assets/image/screenshot/Kirameki_Farm.jpg" alt="Kirameki Farm"
+                                    class="work-card__img">
                             </div>
                             <dl>
                                 <dt>制作時間</dt>
@@ -111,13 +120,15 @@
                                 <dt>使用技術</dt>
                                 <dd>HTML / CSS / JavaScript</dd>
                             </dl>
-                            <a href="../works/Kirameki_Farm/index.html" class="button button__list" target="_blank">サイトを見る<i class="bi bi-chevron-right button__bi"></i></a>
+                            <a href="../works/Kirameki_Farm/index.html" class="button button__list" target="_blank">サイトを見る<i
+                                    class="bi bi-chevron-right button__bi"></i></a>
                         </div>
                         <!-- 案件4-->
                         <div class="work-card__body">
                             <div class="work-card__title">
                                 <h3 class="work-card__name">LPコーディング<br>（TechAcademy課題4）</h3>
-                                <img src="../assets/image/screenshot/KIRAMEKI_BEAUTY_LABO.jpg" alt="KIRAMEKI BEAUTY LABO" class="work-card__img">
+                                <img src="../assets/image/screenshot/KIRAMEKI_BEAUTY_LABO.jpg" alt="KIRAMEKI BEAUTY LABO"
+                                    class="work-card__img">
                             </div>
                             <dl>
                                 <dt>制作時間</dt>
@@ -127,7 +138,8 @@
                                 <dt>使用技術</dt>
                                 <dd>HTML / CSS / JavaScript</dd>
                             </dl>
-                            <a href="../works/KIRAMEKI_BEAUTY_LABO/index.html" class="button button__list" target="_blank">サイトを見る<i class="bi bi-chevron-right button__bi"></i></a>
+                            <a href="../works/KIRAMEKI_BEAUTY_LABO/index.html" class="button button__list"
+                                target="_blank">サイトを見る<i class="bi bi-chevron-right button__bi"></i></a>
                         </div>
                     </div>
                     <!-- 案件5 -->
@@ -148,7 +160,8 @@
                             </dl>
                         </div>
                         <div class="work-card__body--right">
-                            <a href="../works/ai-image/20260321_fortune_teller_image.png" data-lightbox="ai-gallery" data-title="SeaArtを使用したAI画像生成案件。占い師キャラクターのイラストをプロンプト生成。クライアントより★5評価を獲得。">
+                            <a href="../works/ai-image/20260321_fortune_teller_image.png" data-lightbox="ai-gallery"
+                                data-title="SeaArtを使用したAI画像生成案件。占い師キャラクターのイラストをプロンプト生成。クライアントより★5評価を獲得。">
                                 <img src="../works/ai-image/20260321_fortune_teller_image.png" alt="AI画像" class="thumbnail">
                             </a>
                             <p class="work-card__caption"><i class="bi bi-arrow-up"></i>クリックで拡大</p>

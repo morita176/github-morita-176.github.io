@@ -4,20 +4,28 @@
 /* Contact
 ------------------------------------------ */
 .contact {
-  margin: f.rem(96) auto f.rem(60);
+  margin: 0 auto f.rem(60);
 
-  & p {
-    margin-top: f.rem(20);
-    text-align: center;
+  &__attention {
+    background-color: v.$c-purple;
+    padding: f.rem(20) f.rem(16);
+    margin-bottom: f.rem(96);
   }
-  &__list{
+
+  & > .container p {
+    margin-top: f.rem(20);
+  }
+
+  &__list {
     margin: f.rem(20) auto;
     padding: f.rem(20);
     background-color: v.$c-orange-li;
-    & h3{
+
+    & h3 {
       text-align: center;
     }
-    & ul{
+
+    & ul {
       display: flex;
       flex-direction: column;
       justify-content: center;

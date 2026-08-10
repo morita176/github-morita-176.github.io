@@ -7,8 +7,11 @@
 // Font Family
 $f-main: "Noto Sans JP",sans-serif;
 
+// Font Quicksand
+$f-quicksand: "Quicksand", sans-serif;
+
 // Font M PLUS Rounded 1c
-$f-mplus: "M PLUS Rounded 1c",sans-serif;
+$f-mplus: "M PLUS Rounded 1c", sans-serif;
 
 // root Size
 $fz-root: 16;
@@ -18,7 +21,6 @@ $f-regular: 400;
 $f-medium:500;
 $f-semibold:600;
 $f-bold:700;
-
 
 // Font Size rem変換
 @mixin rem($size) {

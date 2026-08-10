@@ -11,3 +11,10 @@
     max-width: v.$width-wide;
   }
 }
+
+/* SP版では左寄せ、PC版では中央寄せ*/
+.text-center {
+  @include v.mq(pc) {
+    text-align: center;
+  }
+}

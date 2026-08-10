@@ -1,0 +1,71 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* Writing
+------------------------------------------ */
+.writing {
+  margin: f.rem(96) auto f.rem(60);
+
+  &__attention {
+    margin: f.rem(40) auto;
+  }
+
+  & ul {
+    border-top: 1px solid v.$c-base;
+
+    & li {
+      padding: f.rem(10) 0 f.rem(10) f.rem(20);
+      border-bottom: 1px solid v.$c-base;
+
+      @include v.mq(pc) {
+        padding-left: f.rem(25);
+        font-size: f.rem(18);
+      }
+
+      & a:hover {
+        opacity: 1;
+
+        .writing__text {
+          font-weight: v.$f-bold;
+          color: v.$c-green;
+        }
+
+        .writing__badge {
+          background-color: v.$c-green;
+        }
+      }
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    width: f.rem(100);
+
+    @include v.mq(pc) {
+      width: f.rem(130);
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    width: f.rem(100);
+    padding: f.rem(7) 0;
+    color: v.$c-white;
+    line-height: 1;
+    text-align: center;
+    background-color: v.$c-orange-dark;
+    border-radius: f.rem(5);
+  }
+
+  &__text {
+    display: block;
+    margin-top: 1rem;
+    line-height: 1.5;
+
+    @include v.mq(pc) {
+      display: inline-block;
+      margin-top: 0;
+      margin-left: f.rem(20);
+    }
+  }
+}

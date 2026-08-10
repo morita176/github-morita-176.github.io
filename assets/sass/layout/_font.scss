@@ -2,6 +2,13 @@
 @use '../foundation/functions'as f;
 
 /* フォントの共通スタイル */
+// Font Quicksand
+.quicksand {
+  font-family: v.$f-quicksand;
+  font-weight: 500;
+}
+
+
 // Font M PLUS Rounded 1c
 .mplus {
   font-family: v.$f-mplus;

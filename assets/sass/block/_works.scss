@@ -6,15 +6,6 @@
 .works {
   margin-top: f.rem(96);
 
-  &__attention {
-    background-color: v.$c-purple;
-    padding: f.rem(20) f.rem(16);
-
-    @include v.mq(pc) {
-      text-align: center;
-    }
-  }
-
   &__item {
     background-color: v.$c-orange;
     padding-top: f.rem(20);
@@ -157,6 +148,10 @@
   dd {
     padding: f.rem(5) f.rem(10);
     border-bottom: 2px dashed v.$c-orange-li;
+
+    @include v.mq(pc) {
+      font-size: f.rem(20);
+    }
   }
 
   & dt {

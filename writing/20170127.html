@@ -9,7 +9,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/image/favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/image/favicon_io/favicon-16x16.png">
         <link rel="apple-touch-icon" href="../assets/image/favicon_io/apple-touch-icon.png">
-        <title>【ログイン】morita176 ポートフォリオ</title>
+        <title>Web制作・ライティング｜morita176 ポートフォリオ</title>
         <meta name="description" content="Web制作を中心に、HTML・CSS・JavaScript・Sassなどを使ったコーディングに取り組んでいます。ライティングでは旅行や日常をテーマにした文章を制作しています。">
         <meta name="keywords" content="">
         <meta property="og:title" content="Web制作・ライティング｜morita176 ポートフォリオ">
@@ -28,13 +28,16 @@
         <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
         <!-- Bootstrap Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!-- SlickのCSS -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
         <!-- CSS -->
         <link rel="stylesheet" href="../assets/style/main.css">
     </head>
 
     <body>
         <header class="header">
-            <a class="header__logo quicksand" href="./">morita176</a>
+            <a class="header__logo mplus" href="../">morita176</a>
 
             <!-- 開閉用チェックボックス -->
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -46,40 +49,63 @@
 
             <!-- メニュー -->
             <nav class="hamburger-menu">
-                <ul class="hamburger-nav-list quicksand">
+                <ul class="hamburger-nav-list mplus">
                     <li><a href="../#about">About Me</a></li>
                     <li><a href="../#skills">Skills</a></li>
                     <li><a href="../works/login.html">Works</a></li>
-                    <li><a href="../works/login.html">Writing</a></li>
+                    <li><a href="../#writing">Writing</a></li>
                     <li><a href="../#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <!-- main -->
         <main class="main">
-            <!-- login -->
-            <section class="login">
-                <div class="container">
-                    <h1 class="mplus">ログイン</h1>
-                    <p>閲覧を続けるには、パスワードを入力してください</p>
-                    <!-- パスワード間違いの時に表示する-->
-                    <p id="loginError" class="login__error"></p>
-                    <input type="password" id="pw" class="login__textbox" placeholder="パスワードを入力">
-                    <p><input type="checkbox" id="showpassword" class="login__margin"><span>パスワードを表示する</span></p>
-                    <input type="button" value="ログイン" id="loginBtn" class="button button__login">
+            <!-- 記事 -->
+            <section class="news">
+                <div class="news__inner">
+                    <p class="news__category">日常</p>
+                    <time class="news__date">2017.01.27</time>
+                    <h1 class="mplus">よろしい。ならば野菜攻防戦だ</h1>
+                    <div class="news__body">
+                        <p>老後を家庭菜園で満喫中の父から、あれとこれとそれが収穫できたから欲しい？とうれしいお便りが来ました。<br>
+                            正直、全部くださいヤッター！！と言おうと思ったのですが、以前、母が「野菜欲しいって姉に聞いたら全種類ごっそり持ってった！！」と盛大に愚痴っていたのを思い出し、同じ轍は踏むまいと「あれとこれだけください」と返信したところ、</p>
+                        <p>『全部はいらないってどういうことだ！』</p>
+
+                        <p>その晩、母からまさかの怒りの電話。<br>
+                            「全部欲しいって言ったら、怒るじゃん！」<br>
+                            『当たり前でしょ？！』<br>
+                            「だから遠慮したのに！」<br>
+                            『だけど、全部もいらないって言われるのもムカツク！！』</p>
+                        <p>
+                            どちらにせよ、怒られる運命だったようです。</p>
+                        <p>
+                            それだけではなく、<br>
+                            『大豆は？もうすぐ節分でしょ？里いもは？いらないの？なんで？』<br>
+                            とさらなる押し売り、じゃなかったお誘い。<br>
+                            いや、頂いて良いなら、全部ありがたく頂きます。頂きますけれども。</p>
+                        <p>
+                            「そんなにもらっていいの？じゃ、欲しい！」<br>
+                            『はぁ？』</p>
+                        <p>
+                            すごまれました。<br>
+                            私はどうしたらよかったのでしょうか。
+                        </p>
+                    </div>
+
+                    <nav class="news__nav">
+                        <a href="20161210.html"><i class="bi bi-caret-left"></i>前の記事</a>
+                        <a href="../#writing">一覧へ</a>
+                        <a href="20230227.html">次の記事<i class="bi bi-caret-right"></i></a>
+                    </nav>
+
                 </div>
             </section>
-
         </main>
 
         <!-- footer -->
         <footer class="footer">
             <p>Copyright &copy; 2026 morita176 All Rights Reserved.</p>
         </footer>
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- js -->
-        <script src="./script/login.js"></script>
     </body>
 
 </html>

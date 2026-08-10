@@ -85,6 +85,16 @@
     gap: f.rem(26);
     padding: f.rem(32) 0;
     text-align: center;
+
+    & li:last-child {
+      background-color: v.$c-white;
+      padding: f.rem(12) 0;
+      border-radius: f.rem(30);
+
+      & a {
+        color: v.$c-green;
+      }
+    }
   }
 }
 
@@ -103,5 +113,14 @@
     align-items: center;
     justify-content: space-between;
 
+    & li:last-child {
+      background-color: v.$c-white;
+      padding: 0 f.rem(16);
+      border-radius: f.rem(30);
+
+      & a {
+        color: v.$c-green;
+      }
+    }
   }
 }

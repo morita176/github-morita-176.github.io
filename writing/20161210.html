@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- ファビコン -->
+        <link rel="icon" href="../assets/image/favicon_io/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/image/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/image/favicon_io/favicon-16x16.png">
+        <link rel="apple-touch-icon" href="../assets/image/favicon_io/apple-touch-icon.png">
+        <title>Web制作・ライティング｜morita176 ポートフォリオ</title>
+        <meta name="description" content="Web制作を中心に、HTML・CSS・JavaScript・Sassなどを使ったコーディングに取り組んでいます。ライティングでは旅行や日常をテーマにした文章を制作しています。">
+        <meta name="keywords" content="">
+        <meta property="og:title" content="Web制作・ライティング｜morita176 ポートフォリオ">
+        <meta property="og:description" content="Web制作を中心に、HTML・CSS・JavaScript・Sassなどを使ったコーディングに取り組んでいます。ライティングでは旅行や日常をテーマにした文章を制作しています。">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://morita176.github.io/github-morita-176.github.io/">
+        <meta property="og:image" content="./assets/image/cover.jpg">
+        <meta property="og:site_name" content="Web制作・ライティング｜morita176 ポートフォリオ">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Noto+Sans+JP:wght@100..900&family=Quicksand:wght@300..700&display=swap"
+            rel="stylesheet">
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!-- SlickのCSS -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="../assets/style/main.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <a class="header__logo mplus" href="../">morita176</a>
+
+            <!-- 開閉用チェックボックス -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <!-- ハンバーガーボタン -->
+            <label for="menu-toggle" class="hamburger__button">
+                <i class="bi bi-list"></i>
+            </label>
+
+            <!-- メニュー -->
+            <nav class="hamburger-menu">
+                <ul class="hamburger-nav-list mplus">
+                    <li><a href="../#about">About Me</a></li>
+                    <li><a href="../#skills">Skills</a></li>
+                    <li><a href="../works/login.html">Works</a></li>
+                    <li><a href="../#writing">Writing</a></li>
+                    <li><a href="../#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- main -->
+        <main class="main">
+            <!-- 記事 -->
+            <section class="news">
+                <div class="news__inner">
+                    <p class="news__category">日常</p>
+                    <time class="news__date">2016.12.10</time>
+                    <h1 class="mplus">ハジメテの骨折</h1>
+                    <p class="news__lead">
+                        骨折しました。
+                    </p>
+                    <div class="news__body">
+                        <p>悲報って思いますでしょ？違ったんですよ…。20代後半にて人生初の骨折だとわくわ…ドキドキしてたのに。</p>
+                        <p>ことの始まりは、一か月ほど前にさかのぼります。</p>
+                        <p>
+                            ウッカリ傘を落として、先（石突というらしい）が左足の薬指に直撃！！<br>
+                            その日は無茶苦茶痛くて、歩くのも一苦労。足の裏まで内出血してました。<br>
+                            とはいえ、よく壁とかに足をぶつけるワタクシ、ただの打ち身と湿布を貼って放置しました。<br>
+                            1週間後、内出血はきれいに治り、歩行もまったく問題なし。時々痛むなぁ程度だったので、後は自然治癒とばかりにやっぱり放置です。<br>
+                            が、1か月たっても時々痛むので、ちょっと心配になり、病院へ。</p>
+                        <div class="news__dialog">
+                            <p class="news__dialog--title"><i class="bi bi-heart-pulse-fill"></i>病院にて</p>
+                            <p class="news__dialog--body">
+                                レントゲンを撮って診察してもらうと、先生が開口一番こう言いました。<br>
+                                「あ、ここ黒くなってるね」<br>
+                                「え、黒いですか？」<br>
+                                「ほら、拡大するとほら！右足の同じところ見るとほら！！」<br>
+                                「そ、そうですね（わからんぞ汗）」<br>
+                                「これね～、折れてると黒くなるんだよね」<br>
+                                「へー………骨折してたんですかっ！？」<br>
+                                「うん」<br>
+                                ウンじゃないよじーさん。折れると痛みで動けないって聞いてたんだけど！？<br>
+                                「靴はいてると、靴がギブス替わりになって、気づかないんだよね。家で裸足でいる時とか、痛くなかった？」<br>
+                                「そ、そういえば」<br>
+                                「まぁ、でももう1か月たってるしね。ギブスするほどじゃないなぁ」<br>
+                                「あ、もうくっついてるってことですか？」<br>
+                                「そうだね。足ぶつけたらまた折れるだろうけど」<br>
+                                「……」<br>
+                                私、結構足ぶつけるんです、とは言えませんでした。<br>
+                            </p>
+                        </div>
+                        <p>
+                            もうほぼ治りかけ、ということなので、痛みは市販の湿布薬貼って、あとは自然治癒だそうです。<br>
+                            人生初の骨折は、湿布薬とレントゲン代だけで済みました。<br>
+                            ヤッタネ！<br>
+                            <span class="news__big">
+                                ちくしょう！松葉杖ついてみたかったのに！！
+                            </span>
+                        </p>
+                    </div>
+
+                    <nav class="news__nav">
+                        <!--<a href="#"><i class="bi bi-caret-left"></i>前の記事</a>-->
+                        <a href="../#writing">一覧へ</a>
+                        <a href="20170127.html">次の記事<i class="bi bi-caret-right"></i></a>
+                    </nav>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer class="footer">
+            <p>Copyright &copy; 2026 morita176 All Rights Reserved.</p>
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,105 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* news
+------------------------------------------ */
+
+.news {
+  background-color: #F2F0EE;
+
+  &__inner {
+    max-width: f.rem(780);
+    margin: 0 auto;
+    background-color: v.$c-white;
+    padding: f.rem(100) f.rem(40);
+  }
+
+  &__category {
+    display: inline-block;
+    padding: 4px 12px;
+    background: v.$c-green;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+
+  &__date {
+    display: block;
+    margin-top: f.rem(16);
+    color: #888;
+  }
+
+  & h1 {
+    margin-top: f.rem(16);
+    line-height: 1.4;
+    font-weight: v.$f-bold;
+
+    @include v.mq(pc) {
+      font-size: f.rem(40);
+    }
+  }
+
+  &__lead {
+    margin-top: f.rem(32);
+    font-size: f.rem(28);
+    line-height: 2;
+    font-weight: bold;
+  }
+
+  &__body {
+    margin-top: 48px;
+  }
+
+  &__body p {
+    margin-bottom: 2em;
+    line-height: 2;
+  }
+
+  &__dialog {
+    background: v.$c-orange-li;
+    border-left: 4px solid v.$c-orange-dark;
+
+    &--title {
+      background-color: v.$c-orange-dark;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+      & i{
+      font-size:f.rem(24);
+      padding-right: f.rem(15);
+      }
+    }
+    &--body {
+      padding: 0 f.rem(20) f.rem(20);
+    }
+  }
+
+  &__big {
+    font-weight: v.$f-bold;
+    font-size: f.rem(20);
+  }
+
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid #ddd;
+  }
+
+  &__nav a {
+    text-decoration: none;
+  }
+
+}
+
+/* 記事の画像 */
+.news-image {
+  display: block;
+  margin: 0 auto;
+  width: f.rem(200);
+  height: auto;
+
+}
