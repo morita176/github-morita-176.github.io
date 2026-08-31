@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- ファビコン -->
+        <link rel="icon" href="../assets/image/favicon_io/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/image/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/image/favicon_io/favicon-16x16.png">
+        <link rel="apple-touch-icon" href="../assets/image/favicon_io/apple-touch-icon.png">
+        <title>Web制作・ライティング｜morita176 ポートフォリオ</title>
+        <meta name="description" content="Web制作を中心に、HTML・CSS・JavaScript・Sassなどを使ったコーディングに取り組んでいます。ライティングでは旅行や日常をテーマにした文章を制作しています。">
+        <meta name="keywords" content="">
+        <meta property="og:title" content="Web制作・ライティング｜morita176 ポートフォリオ">
+        <meta property="og:description" content="Web制作を中心に、HTML・CSS・JavaScript・Sassなどを使ったコーディングに取り組んでいます。ライティングでは旅行や日常をテーマにした文章を制作しています。">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://morita176.github.io/github-morita-176.github.io/">
+        <meta property="og:image" content="./assets/image/cover.jpg">
+        <meta property="og:site_name" content="Web制作・ライティング｜morita176 ポートフォリオ">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Noto+Sans+JP:wght@100..900&family=Quicksand:wght@300..700&display=swap"
+            rel="stylesheet">
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!-- SlickのCSS -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="../assets/style/main.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <a class="header__logo mplus" href="../">morita176</a>
+
+            <!-- 開閉用チェックボックス -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <!-- ハンバーガーボタン -->
+            <label for="menu-toggle" class="hamburger__button">
+                <i class="bi bi-list"></i>
+            </label>
+
+            <!-- メニュー -->
+            <nav class="hamburger-menu">
+                <ul class="hamburger-nav-list mplus">
+                    <li><a href="../#about">About Me</a></li>
+                    <li><a href="../#skills">Skills</a></li>
+                    <li><a href="../works/login.html">Works</a></li>
+                    <li><a href="../#writing">Writing</a></li>
+                    <li><a href="../#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- main -->
+        <main class="main">
+            <!-- 記事 -->
+            <section class="news">
+                <div class="news__inner">
+                    <p class="news__category">旅行</p>
+                    <time class="news__date">2019.09.30</time>
+                    <h1 class="mplus">一人クルーズ旅行よもやま話</h1>
+                    <div class="news__body">
+                        <div class="news-image__photos">
+                            <img src="../assets/image/cruise/IMG_01.jpg" alt="">
+                        </div>
+                        <p>行っちゃった行っちゃった。<br>同僚先輩後輩取引先すべてに拝み倒して、1週間有給取って、クルーズ旅行に！<br>
+                            一人です。何か問題が？<br>
+                            行政のキャンペーンで旅行代金が割引されていたこともあり、一人参加でもかなりお得。ありがとう行政！</p>
+                        <p>
+                            航路は、横浜を出発して、広島、北九州、釜山、舞鶴を経由し、金沢へ。
+                        </p>
+                        <p>
+                            船は外国船で、日本語が話せるスタッフは2名だけ。<br>
+                            英語？できません。ジェスチャーで何とかなるなる！<br>
+                            ……って思ってたけど、んな甘い話はない。</p>
+                        <p class="news__lead">ミッションインポッシブル！</p>
+                        <div class="news-image__photos">
+                            <img src="../assets/image/cruise/IMG_02.jpg" alt="">
+                        </div>
+                        <p>とある昼下がり、紅茶を頼んでのんびり読書にいそしんでいたら、「ティー」が通じないとスタッフに泣きつかれた。<br>
+                            その場のおば様みんな揃ってキョトン顔。<br>
+                            「ティー？ナニソレ？」<br>Oh My God！<br>
+                            どうにかこうにか「ティーっていうのはね、アッサムとかアールグレイとかだよ」と説明して、ようやく注文完了。</p>
+                        <p>ミッションコンプリート！<br>
+                            スタッフに無茶苦茶感謝された。</p>
+                        <p>別日の夜には、ショーのお供にコーヒーを持ち込みたくて、スタッフに「テイクアウト」を頼んだけど、通じない！<br>
+                            持ち帰り、持っていく…英語でなんて言うんだっけ？<br>
+                            半泣きになりながら「コーヒー、withショー、GO！」で何とかミッションコンプリート。<br>
+                            甘かった…語学力ってやっぱり大事…。</p>
+                        <p class="news__lead">「今日はどちらから？」と聞かれて</p>
+                        <p>寄港地の広島で降りたとき、地元メディアから「今日はどちらから？」とマイクを向けられ、「え、船から…」と答えたら、アナウンサー含め、周りに苦笑されたよ。<br>
+                            間違って無くない！？<br>
+                            正解って何よ！？</p>
+                        <p>寄港地では、主に橋を見てきた。<br>
+                            日帰りだし、ツアーは高いし、行ったことがある場所ばかり。<br>
+                            何をしようかと悩んだ末、ピタ●ラスイッチの「そこで橋は考えた」で出てくる可動式の橋を見に行くことにした。<br>
+                            昔、観光で訪れたことはあったけど、橋が可動式だとは知らなかった。<br>
+                            動くタイミングを見計らって、いざレッツゴー！<br>
+                            TVでは見たけど、実際に動くところを見ると感動もひとしお。<br>
+                        <div class="news-image__photos">
+                            <img src="../assets/image/cruise/IMG_03.jpg" alt="">
+                            <img src="../assets/image/cruise/IMG_04.jpg" alt="">
+                        </div>
+                        お供は同じく一人参加のおば様。<br>
+                        いや私は一人でのんびり……なんでも無いです。<br>
+                        旅先で友達ができるのも、旅の醍醐味です、ハイ。
+                        </p>
+                        <p class="news__lead">船に戻ってからも楽しみは続く</p>
+                        <p>寄港地から帰ると、スタッフがレモン水やきゅうり水（きゅうり！？）で出迎えてくれたり、おやつには毎回ホールケーキが用意されていたり、あちこちで生演奏をしていたり。<br>
+                            船内も船外もイベント盛りだくさん。</p>
+                        <div class="news-image__photos">
+                            <img src="../assets/image/cruise/IMG_05.jpg" alt="">
+                            <img src="../assets/image/cruise/IMG_06.jpg" alt="">
+                        </div>
+                        <p>船内をグルグルするだけでも一日が終わってしまうほどで、飽きることがなかった。<br>
+                            1週間のクルーズは、あっという間。
+                            </p>
+                        <div class="news-image__photos">
+                            <img src="../assets/image/cruise/IMG_08.jpg" alt="">
+                        </div>
+                        <p>そして帰宅。</p>
+                        <p>早々に風邪をこじらせて寝込んだよ！( ；∀；)<br>
+                            1週間も休みをもらったのに、戻ってきても同僚先輩後輩取引先に迷惑をかけてしまった……。</p>
+                    </div>
+
+                    <nav class="news__nav">
+                        <a href="20170127.html"><i class="bi bi-caret-left"></i>前の記事</a>
+                        <a href="../#writing">一覧へ</a>
+                        <a href="20230227.html">次の記事<i class="bi bi-caret-right"></i></a>
+                    </nav>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer class="footer">
+            <p>Copyright &copy; 2026 morita176 All Rights Reserved.</p>
+        </footer>
+    </body>
+
+</html>
