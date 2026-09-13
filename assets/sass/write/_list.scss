@@ -1,0 +1,89 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* Writing一覧
+------------------------------------------ */
+.news-all {
+
+  &__title {
+    padding: f.rem(10);
+    margin: f.rem(20) 0;
+    font-weight: v.$f-bold;
+    font-size: f.rem(20);
+    background-color: v.$c-purple;
+    vertical-align: middle;
+    border-radius: f.rem(30) 0 0 f.rem(30);
+
+    & .bi {
+      display: inline-block;
+      width: f.rem(40);
+      height: f.rem(40);
+      font-size: f.rem(24);
+      margin-right: f.rem(10);
+      background-color: v.$c-white;
+      border-radius: 50%;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-weight: v.$f-bold;
+    display: block;
+    margin-top: 1rem;
+    line-height: 1.5;
+
+    @include v.mq(pc) {
+      display: inline-block;
+      margin-top: 0;
+      margin-left: f.rem(20);
+    }
+  }
+}
+
+
+/* アコーディオンメニュー
+------------------------------------------ */
+
+.accordion {
+  margin-bottom: 7px;
+  border: 1px solid v.$c-base;
+  border-radius: f.rem(10);
+
+  & summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1em 2em;
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+  }
+
+  & p {
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0;
+    padding: .3em 2em 1.5em;
+    transition: transform .5s, opacity .5s;
+  }
+}
+
+.accordion[open] p {
+  transform: none;
+  opacity: 1;
+}
+
+.accordion summary i {
+  margin-left: f.rem(10);
+  font-size: f.rem(24);
+  color: v.$c-green;
+  transition: transform .5s;
+}
+
+.accordion[open] summary i {
+  transform: rotate(180deg);
+}

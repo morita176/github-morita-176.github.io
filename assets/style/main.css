@@ -231,10 +231,11 @@ a {
   transition: opacity 0.3s ease;
 }
 
+/*
 a:hover {
   opacity: 0.7;
 }
-
+*/
 ul {
   list-style: none;
 }
@@ -320,21 +321,25 @@ ul {
 }
 
 /* 見出し */
-h2 {
+.subpage h1,
+.main h2 {
   font-size: 2.5rem;
   line-height: 1.2;
   text-align: center;
   color: #000;
 }
 @media screen and (min-width: 768px) {
-  h2 {
+  .subpage h1,
+  .main h2 {
     font-size: 3.75rem;
   }
 }
-h2 span {
+.subpage h1 span,
+.main h2 span {
   position: relative;
 }
-h2 span::before {
+.subpage h1 span::before,
+.main h2 span::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -346,7 +351,8 @@ h2 span::before {
   z-index: -1;
   transform: translate(-77%, -95%);
 }
-h2 span::before {
+.subpage h1 span::before,
+.main h2 span::before {
   width: 40px;
   height: 40px;
 }
@@ -939,11 +945,14 @@ h3 {
 .writing__attention {
   margin: 2.5rem auto;
 }
+.writing__info {
+  flex: 1;
+}
 .writing ul {
   border-top: 1px solid #444;
 }
 .writing ul li {
-  padding: 0.625rem 0 0.625rem 1.25rem;
+  padding: 0.625rem 1.25rem;
   border-bottom: 1px solid #444;
 }
 @media screen and (min-width: 768px) {
@@ -951,6 +960,20 @@ h3 {
     padding-left: 1.5625rem;
     font-size: 1.125rem;
   }
+}
+.writing ul li a {
+  display: flex;
+  align-items: center;
+}
+.writing ul li a::after {
+  content: "\f138";
+  font-family: "bootstrap-icons";
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #F5BB06;
+  margin-left: 1rem;
+  flex-shrink: 0;
+  transition: transform 0.5s;
 }
 .writing ul li a:hover {
   opacity: 1;
@@ -961,6 +984,10 @@ h3 {
 }
 .writing ul li a:hover .writing__badge {
   background-color: #92C353;
+}
+.writing ul li a:hover::after {
+  transform: translateX(5px);
+  color: #92C353;
 }
 .writing__date {
   display: inline-block;
@@ -985,19 +1012,101 @@ h3 {
   display: block;
   margin-top: 1rem;
   line-height: 1.5;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .writing__text {
     display: inline-block;
     margin-top: 0;
     margin-left: 1.25rem;
+    font-weight: 400;
+  }
+}
+.writing__btn {
+  margin: 1.25rem auto;
+}
+
+/* Writing一覧
+------------------------------------------ */
+.news-all__title {
+  padding: 0.625rem;
+  margin: 1.25rem 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  background-color: #EDDDFD;
+  vertical-align: middle;
+  border-radius: 1.875rem 0 0 1.875rem;
+}
+.news-all__title .bi {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+}
+.news-all__text {
+  font-weight: 700;
+  display: block;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+@media screen and (min-width: 768px) {
+  .news-all__text {
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 1.25rem;
   }
 }
 
-/* news
+/* アコーディオンメニュー
+------------------------------------------ */
+.accordion {
+  margin-bottom: 7px;
+  border: 1px solid #444;
+  border-radius: 0.625rem;
+}
+.accordion summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1em 2em;
+  cursor: pointer;
+}
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+.accordion p {
+  transform: translateY(-10px);
+  opacity: 0;
+  margin: 0;
+  padding: 0.3em 2em 1.5em;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.accordion[open] p {
+  transform: none;
+  opacity: 1;
+}
+
+.accordion summary i {
+  margin-left: 0.625rem;
+  font-size: 1.5rem;
+  color: #92C353;
+  transition: transform 0.5s;
+}
+
+.accordion[open] summary i {
+  transform: rotate(180deg);
+}
+
+/* 各記事
 ------------------------------------------ */
 .news {
-  background-color: #F2F0EE;
+  background-color: #e3effc;
 }
 .news__inner {
   max-width: 48.75rem;
@@ -1105,5 +1214,134 @@ h3 {
   }
   .news-image__photos:has(img:nth-child(2)) img {
     width: 100%;
+  }
+}
+.news-image__list {
+  display: flex;
+  gap: 2rem;
+  width: 90%;
+  max-width: 48.75rem;
+  margin: 0.625rem auto;
+}
+.news-image__list--item {
+  width: 50%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+.news-image__list--item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Webライティング
+------------------------------------------ */
+.career {
+  background-color: #FEF5D1;
+}
+.career__inner {
+  max-width: 65rem;
+  margin: 0 auto;
+}
+.career__text {
+  display: block;
+  margin-top: 1rem;
+  color: #888;
+}
+.career h1 {
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .career h1 {
+    font-size: 2.5rem;
+  }
+}
+.career h2 {
+  padding-top: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.5;
+  border-bottom: 2px solid #F5BB06;
+  margin-bottom: 0.625rem;
+}
+.career h3 {
+  margin-top: 1.5rem;
+}
+.career__section {
+  scroll-margin-top: 4.0625rem;
+}
+.career__body {
+  background-color: #ffffff;
+  padding: 4.375rem 2rem;
+}
+.career__body p {
+  line-height: 2;
+}
+.career__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 10rem;
+  gap: 2rem;
+  align-items: stretch;
+}
+.career__aside {
+  padding-top: 6.25rem;
+}
+.career__aside-inner {
+  position: sticky;
+  top: 4.375rem;
+  padding: 0.9375rem 0.625rem;
+  background-color: #ffffff;
+}
+.career__aside-inner ol {
+  list-style-position: inside;
+}
+.career__aside-inner ol li {
+  line-height: 2;
+}
+.career__aside-inner ol li:hover {
+  font-weight: 700;
+}
+.career__aside-inner h2 {
+  padding-top: 0;
+}
+@media screen and (max-width: 767px) {
+  .career {
+    background-color: transparent;
+  }
+  .career__inner {
+    margin-top: 3.75rem;
+  }
+  .career__section {
+    scroll-margin-top: 10.625rem;
+  }
+  .career__layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .career__aside {
+    order: -1;
+    position: sticky;
+    top: 5rem;
+    z-index: 10;
+    padding-top: 0;
+    margin: 0 0.625rem;
+  }
+  .career__aside-inner {
+    background-color: #FEF5D1;
+    padding: 0.875rem;
+    border-radius: 0.9375rem;
+  }
+  .career__aside-inner ol {
+    display: flex;
+    justify-content: space-between;
+    list-style-position: inside;
+    list-style: none;
+  }
+  .career__body {
+    padding-top: 0;
+    order: 1;
   }
 }/*# sourceMappingURL=main.css.map */

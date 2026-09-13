@@ -2,7 +2,8 @@
 @use '../foundation/functions'as f;
 
 /* 見出し */
-h2 {
+.subpage h1,
+.main h2 {
   font-size: f.rem(40);
   line-height: 1.2;
   text-align: center;
