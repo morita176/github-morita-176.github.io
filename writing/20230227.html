@@ -37,23 +37,20 @@
 
     <body>
         <header class="header">
-            <a class="header__logo quicksand" href="../">morita176</a>
-
-            <!-- 開閉用チェックボックス -->
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <a class="header__logo quicksand" href="./">morita176</a>
 
             <!-- ハンバーガーボタン -->
-            <label for="menu-toggle" class="hamburger__button">
+            <button type="button" class="hamburger__button">
                 <i class="bi bi-list"></i>
-            </label>
+            </button>
 
-            <!-- メニュー -->
-            <nav class="hamburger-menu">
+            <!-- ナビゲーション、ヘッダーメニュー -->
+            <nav class="hamburger-menu header-nav">
                 <ul class="hamburger-nav-list quicksand">
                     <li><a href="../#about">About Me</a></li>
                     <li><a href="../#skills">Skills</a></li>
                     <li><a href="../works/login.html">Works</a></li>
-                    <li><a href="../#writing">Writing</a></li>
+                    <li><a href="./">Writing</a></li>
                     <li><a href="../#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -72,15 +69,15 @@
                             オトウサマ、ワタクシめは一人暮らしでござる。<br>
                             スーパーに売ってる白菜の1.5倍くらいあるサイズの白菜（一玉！）はさすがに多すぎるでござる。<br>
                             食べても食べてもなくならない！<br>
-                        他にもレタスやほうれん草やネギや…だから多いってありがとね！！</p>
+                            他にもレタスやほうれん草やネギや…だから多いってありがとね！！</p>
                         <p>
                             <span class="news__big">同じくらいアブラムシも多いんだけども！？</span>
                         </p>
                         <p>
                             アブラムシ除去にはお湯と聞いたので、お湯にさらし、茹で、ゴム手袋をしてゴシゴシ手洗いしてもまだ出てくるアブラムシ！(T皿T)<br>
                             スーパーの野菜にはめったに遭遇しないのに。</p>
-                            <p><span class="news__big">世界中の農家サマ、農薬サマ、農業関係者サマに感謝を！( *ﾉ_ _)ﾉﾉ</span></p>
-                            <p>と、よくわからない宗教にハマリそうでございました。</p>
+                        <p><span class="news__big">世界中の農家サマ、農薬サマ、農業関係者サマに感謝を！( *ﾉ_ _)ﾉﾉ</span></p>
+                        <p>と、よくわからない宗教にハマリそうでございました。</p>
                         <p>
                             本日は、白菜の葉っぱの裏から蜘蛛の糸にぐるぐる巻きになった蜂（成虫）がコンニチハ！とご挨拶に。<br>
                             目を逸らして葉ごと新聞でぐるぐる巻きにしてゴミ箱へお送りさせていただきました。<br>
@@ -104,6 +101,10 @@
         <footer class="footer">
             <p>Copyright &copy; 2026 morita176 All Rights Reserved.</p>
         </footer>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- js -->
+        <script src="../assets/script/main.js"></script>
     </body>
 
 </html>

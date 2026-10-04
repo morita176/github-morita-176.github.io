@@ -37,18 +37,15 @@
 
     <body>
         <header class="header">
-            <a class="header__logo quicksand" href="../">morita176</a>
-
-            <!-- 開閉用チェックボックス -->
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <a class="header__logo quicksand" href="./">morita176</a>
 
             <!-- ハンバーガーボタン -->
-            <label for="menu-toggle" class="hamburger__button">
+            <button type="button" class="hamburger__button">
                 <i class="bi bi-list"></i>
-            </label>
+            </button>
 
-            <!-- メニュー -->
-            <nav class="hamburger-menu">
+            <!-- ナビゲーション、ヘッダーメニュー -->
+            <nav class="hamburger-menu header-nav">
                 <ul class="hamburger-nav-list quicksand">
                     <li><a href="../#about">About Me</a></li>
                     <li><a href="../#skills">Skills</a></li>
@@ -108,7 +105,7 @@
                                 <h3>転職すれば解決ですか</h3>
                                 <p>私は2回転職しました。<br>
                                     1回目は、部署をたらい回しにされ、職務経歴書に書けるだけの実績がなく、その見込みもないと思ったからです。<br>
-                                    2回目は、収入アップとキャリアアップです。同じ仕事を5年続け収入も変わらなかったからでした。
+                                    2回目は、収入アップとキャリアアップです。同じ仕事を5年続け収入も変わらなかったからでした。<br>
                                     転職活動は大変でした。「どんなスキルがあるか」「この職場でどんな能力を発揮できるか」の2点を厳しく見られたように思います。<br>
                                     それと同じくらい「自身の未来像」を大事にしていると感じました。<br>
                                     正直に言うと、私は武器にできるほどのスキルはありませんでした。<br>
@@ -174,6 +171,10 @@
         <footer class="footer">
             <p>Copyright &copy; 2026 morita176 All Rights Reserved.</p>
         </footer>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- js -->
+        <script src="../assets/script/main.js"></script>
     </body>
 
 </html>

@@ -37,23 +37,20 @@
 
     <body>
         <header class="header">
-            <a class="header__logo quicksand" href="../">morita176</a>
-
-            <!-- 開閉用チェックボックス -->
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <a class="header__logo quicksand" href="./">morita176</a>
 
             <!-- ハンバーガーボタン -->
-            <label for="menu-toggle" class="hamburger__button">
+            <button type="button" class="hamburger__button">
                 <i class="bi bi-list"></i>
-            </label>
+            </button>
 
-            <!-- メニュー -->
-            <nav class="hamburger-menu">
+            <!-- ナビゲーション、ヘッダーメニュー -->
+            <nav class="hamburger-menu header-nav">
                 <ul class="hamburger-nav-list quicksand">
                     <li><a href="../#about">About Me</a></li>
                     <li><a href="../#skills">Skills</a></li>
                     <li><a href="../works/login.html">Works</a></li>
-                    <li><a href="#">Writing</a></li>
+                    <li><a href="./">Writing</a></li>
                     <li><a href="../#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -69,11 +66,11 @@
                     <ul>
                         <!-- 記事 -->
                         <li><a href="./20260906.html">
-                            <div class="writing__info">
-                                <span class="writing__date">2026.09.06</span>
-                                <span class="writing__badge">お仕事</span>
-                                <span class="writing__text">20代のキャリア</span>
-                            </div>
+                                <div class="writing__info">
+                                    <span class="writing__date">2026.09.06</span>
+                                    <span class="writing__badge">お仕事</span>
+                                    <span class="writing__text">20代のキャリア</span>
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -82,47 +79,47 @@
                     <ul>
                         <!-- 記事 -->
                         <li><a href="./20260912.html">
-                            <div class="writing__info">
-                                <span class="writing__date">2026.09.12</span>
-                                <span class="writing__badge">日常</span>
-                                <span class="writing__text">マイカー・フィット君が大変です</span>
-                            </div>
+                                <div class="writing__info">
+                                    <span class="writing__date">2026.09.12</span>
+                                    <span class="writing__badge">日常</span>
+                                    <span class="writing__text">マイカー・フィット君が大変です</span>
+                                </div>
                             </a>
                         </li>
                         <!-- 記事 -->
                         <li><a href="./20230227.html">
-                            <div class="writing__info">
-                                <span class="writing__date">2023.02.27</span>
-                                <span class="writing__badge">日常</span>
-                                <span class="writing__text">親父殿から届いた白菜が大きすぎる件</span>
-                            </div>
+                                <div class="writing__info">
+                                    <span class="writing__date">2023.02.27</span>
+                                    <span class="writing__badge">日常</span>
+                                    <span class="writing__text">親父殿から届いた白菜が大きすぎる件</span>
+                                </div>
                             </a>
                         </li>
                         <!-- 記事 -->
                         <li><a href="./20190930.html">
-                            <div class="writing__info">
-                                <span class="writing__date">2019.09.30</span>
-                                <span class="writing__badge">旅行</span>
-                                <span class="writing__text">一人クルーズ旅行よもやま話</span>
-                            </div>
+                                <div class="writing__info">
+                                    <span class="writing__date">2019.09.30</span>
+                                    <span class="writing__badge">旅行</span>
+                                    <span class="writing__text">一人クルーズ旅行よもやま話</span>
+                                </div>
                             </a>
                         </li>
                         <!-- 記事 -->
                         <li><a href="./20170127.html">
-                            <div class="writing__info">
-                                <span class="writing__date">2017.01.27</span>
-                                <span class="writing__badge">日常</span>
-                                <span class="writing__text">よろしい。ならば野菜攻防戦だ</span>
-                            </div>
+                                <div class="writing__info">
+                                    <span class="writing__date">2017.01.27</span>
+                                    <span class="writing__badge">日常</span>
+                                    <span class="writing__text">よろしい。ならば野菜攻防戦だ</span>
+                                </div>
                             </a>
                         </li>
                         <!-- 記事 -->
                         <li><a href="./20161210.html">
-                            <div class="writing__info">
-                                <span class="writing__date">2016.12.10</span>
-                                <span class="writing__badge">日常</span>
-                                <span class="writing__text">ハジメテの骨折</span>
-                            </div>
+                                <div class="writing__info">
+                                    <span class="writing__date">2016.12.10</span>
+                                    <span class="writing__badge">日常</span>
+                                    <span class="writing__text">ハジメテの骨折</span>
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -182,6 +179,10 @@
         <footer class="footer">
             <p>Copyright &copy; 2026 morita176 All Rights Reserved.</p>
         </footer>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- js -->
+        <script src="../assets/script/main.js"></script>
     </body>
 
 </html>

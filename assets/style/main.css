@@ -363,14 +363,7 @@ h3 {
 
 /* header
 ------------------------------------------ */
-.menu-toggle {
-  display: none;
-}
-
 .header {
-  flex-wrap: wrap;
-  overflow: hidden;
-  transition: height 0.4s ease;
   position: fixed;
   top: 10px;
   left: 0;
@@ -381,7 +374,7 @@ h3 {
   z-index: 100;
   background-color: #F5BB06;
   border-radius: 30px;
-  overflow: hidden;
+  overflow: visible;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -392,6 +385,13 @@ h3 {
   color: #ffffff;
   font-size: 1.75rem;
 }
+@media screen and (max-width: 767px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
 
 /* ハンバーガーボタン
 ------------------------------------------ */
@@ -401,6 +401,8 @@ h3 {
   align-items: center;
   justify-content: center;
   color: #ffffff;
+  grid-column: 2;
+  grid-row: 1;
 }
 @media screen and (min-width: 768px) {
   .hamburger__button {
@@ -417,27 +419,28 @@ h3 {
 
 @media screen and (max-width: 767px) {
   .hamburger-menu {
-    width: 90vw;
+    width: 100%;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
     background-color: #F5BB06;
+    grid-column: 1/-1;
+    grid-row: 2;
   }
-  .menu-toggle:checked ~ .hamburger-menu {
+  .hamburger-menu-active {
     max-height: 21.875rem;
-    opacity: 1;
-    visibility: visible;
   }
   .hamburger-nav-list {
     display: flex;
     flex-direction: column;
-    gap: 1.625rem;
-    padding: 2rem 0;
+    align-items: center;
+    gap: 1.125rem;
+    padding: 1.25rem 0 2rem;
     text-align: center;
   }
   .hamburger-nav-list li:last-child {
     background-color: #ffffff;
-    padding: 0.75rem 0;
+    padding: 0.75rem 2rem;
     border-radius: 1.875rem;
   }
   .hamburger-nav-list li:last-child a {
@@ -467,6 +470,23 @@ h3 {
     color: #92C353;
   }
 }
+#about,
+#skills,
+#works,
+#writing,
+#contact {
+  scroll-margin-top: 6.25rem;
+}
+@media screen and (min-width: 768px) {
+  #about,
+  #skills,
+  #works,
+  #writing,
+  #contact {
+    scroll-margin-top: 4.375rem;
+  }
+}
+
 /* cover
 ------------------------------------------ */
 .cover {

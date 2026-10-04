@@ -37,23 +37,20 @@
 
     <body>
         <header class="header">
-            <a class="header__logo quicksand" href="../">morita176</a>
-
-            <!-- 開閉用チェックボックス -->
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <a class="header__logo quicksand" href="./">morita176</a>
 
             <!-- ハンバーガーボタン -->
-            <label for="menu-toggle" class="hamburger__button">
+            <button type="button" class="hamburger__button">
                 <i class="bi bi-list"></i>
-            </label>
+            </button>
 
-            <!-- メニュー -->
-            <nav class="hamburger-menu">
+            <!-- ナビゲーション、ヘッダーメニュー -->
+            <nav class="hamburger-menu header-nav">
                 <ul class="hamburger-nav-list quicksand">
                     <li><a href="../#about">About Me</a></li>
                     <li><a href="../#skills">Skills</a></li>
                     <li><a href="../works/login.html">Works</a></li>
-                    <li><a href="../#writing">Writing</a></li>
+                    <li><a href="./">Writing</a></li>
                     <li><a href="../#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -106,6 +103,10 @@
         <footer class="footer">
             <p>Copyright &copy; 2026 morita176 All Rights Reserved.</p>
         </footer>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- js -->
+        <script src="../assets/script/main.js"></script>
     </body>
 
 </html>

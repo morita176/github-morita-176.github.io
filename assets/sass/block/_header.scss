@@ -3,16 +3,7 @@
 
 /* header
 ------------------------------------------ */
-// checkboxは見せない
-.menu-toggle {
-  display: none;
-}
-
-// headerを「伸びる箱」にする
 .header {
-  flex-wrap: wrap;
-  overflow: hidden;
-  transition: height 0.4s ease;
   position: fixed;
   top: 10px;
   left: 0;
@@ -23,7 +14,7 @@
   z-index: 100;
   background-color: v.$c-orange-dark;
   border-radius: 30px;
-  overflow: hidden;
+  overflow: visible;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -34,6 +25,12 @@
   &__logo {
     color: v.$c-white;
     font-size: f.rem(28);
+  }
+
+  @include v.mq(sp) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
   }
 }
 
@@ -46,6 +43,8 @@
     align-items: center;
     justify-content: center;
     color: v.$c-white;
+    grid-column: 2;
+    grid-row: 1;
 
     @include v.mq(pc) {
       display: none;
@@ -64,31 +63,32 @@
 
 @include v.mq(sp) {
   .hamburger-menu {
-    width: 90vw;
+    width: 100%;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
     background-color: v.$c-orange-dark;
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
 
   // メニュー表示時
-  .menu-toggle:checked~.hamburger-menu {
+  .hamburger-menu-active {
     max-height: f.rem(350);
-    opacity: 1;
-    visibility: visible;
   }
 
   // メニュー一覧
   .hamburger-nav-list {
     display: flex;
     flex-direction: column;
-    gap: f.rem(26);
-    padding: f.rem(32) 0;
+    align-items: center;
+    gap: f.rem(18);
+    padding: f.rem(20) 0 f.rem(32);
     text-align: center;
 
     & li:last-child {
       background-color: v.$c-white;
-      padding: f.rem(12) 0;
+      padding: f.rem(12) f.rem(32);
       border-radius: f.rem(30);
 
       & a {
@@ -122,5 +122,18 @@
         color: v.$c-green;
       }
     }
+  }
+}
+
+
+#about,
+#skills,
+#works,
+#writing,
+#contact {
+  scroll-margin-top: f.rem(100);
+
+  @include v.mq(pc) {
+    scroll-margin-top: f.rem(70);
   }
 }

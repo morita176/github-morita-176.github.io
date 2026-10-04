@@ -37,23 +37,20 @@
 
     <body>
         <header class="header">
-            <a class="header__logo quicksand" href="../">morita176</a>
-
-            <!-- 開閉用チェックボックス -->
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <a class="header__logo quicksand" href="./">morita176</a>
 
             <!-- ハンバーガーボタン -->
-            <label for="menu-toggle" class="hamburger__button">
+            <button type="button" class="hamburger__button">
                 <i class="bi bi-list"></i>
-            </label>
+            </button>
 
-            <!-- メニュー -->
-            <nav class="hamburger-menu">
+            <!-- ナビゲーション、ヘッダーメニュー -->
+            <nav class="hamburger-menu header-nav">
                 <ul class="hamburger-nav-list quicksand">
                     <li><a href="../#about">About Me</a></li>
                     <li><a href="../#skills">Skills</a></li>
                     <li><a href="../works/login.html">Works</a></li>
-                    <li><a href="../#writing">Writing</a></li>
+                    <li><a href="./">Writing</a></li>
                     <li><a href="../#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -81,13 +78,13 @@
                             それなら……無理！　それなら……の無限ループ。<br>
                             営業って怖い。<br>
                             ビビり散らかし「ももももも持ち帰ります！」って逃げ帰りました。</p>
-                            <p>両親に相談したら、開口一番、<br>
+                        <p>両親に相談したら、開口一番、<br>
                             「お前に普通車は贅沢だ！どーせ週1，2回の買い物にしか乗らんだろうが、軽にしろ！」<br>
                             「た、確かに……。いや、高速だってたまに乗るもん！」<br>
                             「今の軽はそう悪くないわ！悪いのは燃費くらいだわ！」<br>
                             「た、確かに……」<br>
                             反論は消えました。</p>
-                            <p>ということで、気を取り直して再び購入店へ。<br>
+                        <p>ということで、気を取り直して再び購入店へ。<br>
                             って、軽高くない！？<br>
                             下手したら普通車より高くない！？<br>
                             いくつか提案書を出してもらったけど、全方位カメラだの、ドラレコだの、スタッドレスタイヤだの、何でわざわざ書いてあるんだ？<br>
@@ -100,14 +97,14 @@
                             負けじとマジかこいつ、って顔してやったけど！<br>
                             予算オーバーなのでお断りしたけど、今度は支店長が「それなら…」と無限ループ営業。<br>
                             再び逃げ帰りました。</p>
-                            <p>次は実家でもお世話になっているディーラーへ。<br>
+                        <p>次は実家でもお世話になっているディーラーへ。<br>
                             N-BOXを見せてもらったら、やっぱり高い！<br>
                             そして、やっぱりドラレコもスタッドレスタイヤも無い！<br>
                             ……その「何言ってんだこいつ」って顔はやめてください！！<br>
                             と思っていたら、またもや支店長が登場！<br>
                             「買取分を差し引いて、ドラレコもスタッドレスタイヤ追加して予算ピッタリにします。いかがですか？」<br>
                             「買いましょう」</p>
-                            <p>本日、購入予定のN-BOX君を確認しました。<br>
+                        <p>本日、購入予定のN-BOX君を確認しました。<br>
                             「問題ナシ！買いましょう」<br>
                             「では契約のため、先日お願いした判子と手続きに必要な資料を、」<br>
                             「…忘れました」<br>
@@ -130,6 +127,10 @@
         <footer class="footer">
             <p>Copyright &copy; 2026 morita176 All Rights Reserved.</p>
         </footer>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- js -->
+        <script src="../assets/script/main.js"></script>
     </body>
 
 </html>
